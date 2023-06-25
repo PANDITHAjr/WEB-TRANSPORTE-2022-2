@@ -1,0 +1,55 @@
+<mxfile host="Electron" modified="2023-06-25T21:36:41.566Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.5.0 Chrome/112.0.5615.204 Electron/24.5.1 Safari/537.36" etag="bXZyKQ0pDb74GcdpRD2y" version="21.5.0" type="device">
+  <diagram name="Página-1" id="on7rm3e5oQHIDRcDK8wQ">
+    <mxGraphModel dx="2039" dy="829" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="DavA1A3pYv5WMlJhrJrm-1" value="personal&lt;br&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="-383" y="43" width="161" height="152" as="geometry" />
+        </mxCell>
+        <mxCell id="DavA1A3pYv5WMlJhrJrm-2" value="+ ci_personal&lt;br&gt;+ nombre&lt;br&gt;+ apellido&lt;br&gt;+ edad&lt;br&gt;+ telefono" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="DavA1A3pYv5WMlJhrJrm-1">
+          <mxGeometry y="26" width="161" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="DavA1A3pYv5WMlJhrJrm-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="DavA1A3pYv5WMlJhrJrm-1">
+          <mxGeometry y="144" width="161" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="DavA1A3pYv5WMlJhrJrm-10" value="tipo_personal" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="-58" y="85" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="DavA1A3pYv5WMlJhrJrm-11" value="+id_tipo&lt;br&gt;+descripcion" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="DavA1A3pYv5WMlJhrJrm-10">
+          <mxGeometry y="26" width="160" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="DavA1A3pYv5WMlJhrJrm-12" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="DavA1A3pYv5WMlJhrJrm-10">
+          <mxGeometry y="72" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="DavA1A3pYv5WMlJhrJrm-14" value="usuario" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="-701" y="87" width="160" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="DavA1A3pYv5WMlJhrJrm-15" value="+id_user&lt;br&gt;+name&lt;br&gt;+password" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="DavA1A3pYv5WMlJhrJrm-14">
+          <mxGeometry y="26" width="160" height="61" as="geometry" />
+        </mxCell>
+        <mxCell id="DavA1A3pYv5WMlJhrJrm-16" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="DavA1A3pYv5WMlJhrJrm-14">
+          <mxGeometry y="87" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="DavA1A3pYv5WMlJhrJrm-26" value="vehiculo" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="-554" y="363" width="160" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="DavA1A3pYv5WMlJhrJrm-27" value="+id_vehiculo&lt;br&gt;+placa&lt;br&gt;+modelo&lt;br&gt;+descripcion" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="DavA1A3pYv5WMlJhrJrm-26">
+          <mxGeometry y="26" width="160" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="DavA1A3pYv5WMlJhrJrm-28" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="DavA1A3pYv5WMlJhrJrm-26">
+          <mxGeometry y="110" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="DavA1A3pYv5WMlJhrJrm-30" value="mantenimiento" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="-278" y="367" width="160" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="DavA1A3pYv5WMlJhrJrm-31" value="+id_vehiculo&lt;br&gt;+placa&lt;br&gt;+modelo&lt;br&gt;+descripcion" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="DavA1A3pYv5WMlJhrJrm-30">
+          <mxGeometry y="26" width="160" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="DavA1A3pYv5WMlJhrJrm-32" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="DavA1A3pYv5WMlJhrJrm-30">
+          <mxGeometry y="110" width="160" height="8" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

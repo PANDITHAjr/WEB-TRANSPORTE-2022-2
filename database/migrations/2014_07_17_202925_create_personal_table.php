@@ -15,15 +15,18 @@ class CreatePersonalTable extends Migration
     {
         Schema::create('personal', function (Blueprint $table) {
             $table->id();
+            $table->string('ci');
             $table->string('nombre');
             $table->string('apellido');
             $table->string('edad');
             $table->string('telefono');
-            $table->string('direccion');            
+            $table->string('direccion');
             $table->timestamps();
 
             $table->unsignedBigInteger('id_tipo_personal');
+            $table->unsignedBigInteger('id_sindicato');
             $table->foreign('id_tipo_personal')->references('id')->on('tipo_personal')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreign('id_sindicato')->references('id')->on('sindicatos')->cascadeOnDelete()->cascadeOnUpdate();
 
         });
     }

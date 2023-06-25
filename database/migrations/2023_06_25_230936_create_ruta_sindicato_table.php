@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTipoPersonalTable extends Migration
+class CreateRutaSindicatoTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,15 @@ class CreateTipoPersonalTable extends Migration
      */
     public function up()
     {
-        Schema::create('tipo_personal', function (Blueprint $table) {
+        Schema::create('ruta_sindicato', function (Blueprint $table) {
             $table->id();
-            $table->string('descripcion');
-            $table->char('cat_lic')->nullable();
             $table->timestamps();
+
+            $table->unsignedBigInteger('id_ruta');
+            $table->unsignedBigInteger('id_sindicato');
+            $table->foreign('id_ruta')->references('id')->on('rutas');
+            $table->foreign('id_sindicato')->references('id')->on('sindicatos');
+
         });
     }
 
@@ -28,6 +32,6 @@ class CreateTipoPersonalTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tipo_personal');
+        Schema::dropIfExists('ruta_sindicato');
     }
 }
