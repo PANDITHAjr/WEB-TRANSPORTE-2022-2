@@ -15,13 +15,13 @@ class CreateRutaSindicatoTable extends Migration
     {
         Schema::create('ruta_sindicato', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
 
             $table->unsignedBigInteger('id_ruta');
             $table->unsignedBigInteger('id_sindicato');
             $table->foreign('id_ruta')->references('id')->on('rutas');
             $table->foreign('id_sindicato')->references('id')->on('sindicatos');
 
+            $table->timestamps();
         });
     }
 

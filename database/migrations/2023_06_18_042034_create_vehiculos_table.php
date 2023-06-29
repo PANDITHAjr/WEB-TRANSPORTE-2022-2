@@ -19,12 +19,13 @@ class CreateVehiculosTable extends Migration
             $table->string('placa');
             $table->string('marca');
             $table->string('modelo');
-            $table->timestamps();
 
             $table->unsignedBigInteger('id_personal');
             $table->unsignedBigInteger('id_sindicato');
             $table->foreign('id_personal')->references('id')->on('personal');
             $table->foreign('id_sindicato')->references('id')->on('sindicatos');
+
+            $table->timestamps();
         });
     }
 

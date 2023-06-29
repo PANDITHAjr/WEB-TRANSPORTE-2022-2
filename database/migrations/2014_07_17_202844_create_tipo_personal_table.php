@@ -16,7 +16,6 @@ class CreateTipoPersonalTable extends Migration
         Schema::create('tipo_personal', function (Blueprint $table) {
             $table->id();
             $table->string('descripcion');
-            $table->char('cat_lic')->nullable();
             $table->timestamps();
         });
     }
