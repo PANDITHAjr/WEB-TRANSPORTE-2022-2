@@ -1,0 +1,9 @@
+en 4esos dos ejemplos se implementa el de menu hamburger, card tarjetas , menu desplegacble, 
+
+para reutilizar componentes de patrones con tailwindscss estos sitios son buenos 
+
+https://flowbite.com/docs/components/navbar/#javascript-behaviour
+https://daisyui.com/components/
+https://www.hyperui.dev/components/application-ui/vertical-menu
+https://tailblocks.cc/
+https://kutty.netlify.app/components/

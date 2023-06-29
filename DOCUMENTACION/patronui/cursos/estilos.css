@@ -1,0 +1,146 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+  }
+  /* Estilos para el Menú Desplegable */
+  .dropdown-menu {
+    position: relative;
+    float: right;
+  }
+  
+  .dropdown-toggle {
+    float: right;
+    width: 110px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #3c9bdb;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: 1px solid #fdfcfc;
+    font-family: Arial,Helvetica,sans-serif;
+    color: #fff;
+  }
+  
+  .dropdown-menu-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0; /* Alinea el menú a la derecha */
+    padding: 5px; /* Añade un espaciado interno al menú */
+    white-space: nowrap; /* Evita que los elementos se dividan en varias líneas */
+    margin-top: 50px; /* Añade un espacio entre el botón y el contenido del menú */
+}
+.dropdown-menu-content li a {
+    text-decoration: none;
+  } 
+  .dropdown-menu-content li {
+    
+    margin-bottom: 10px; /* Añade un espaciado vertical entre elementos */
+    list-style: none; /* Eliminar los puntos */
+  }
+  
+/* Mostrar el menú desplegable al pasar el cursor sobre el botón */
+.dropdown-menu:hover .dropdown-menu-content {
+  display: block;
+}
+  
+  /* Estilos para el Patrón de Tarjetas (Cards) */
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    background-color: #d1e5ee;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    width: 300px;
+    transition: box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card:hover {
+    box-shadow: 0 15px 18px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .card-info {
+    padding: 20px;
+  }
+  
+  .card h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .card p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+/* Estilos para el componente de navegación del pie de página */
+footer {
+  background-color: #8fd2e2;
+  padding:20px;
+  margin-top: 50px;
+
+}
+
+.footer-contacto{
+  /* margin-bottom: 10px; */
+ /* margin-right: 100px; */
+ text-align: center;
+}
+
+ .footer-redsocial{
+
+/* margin-right: 900px; */
+text-align: center;
+} 
+
+.footer-contacto h3,.footer-redsocial h3 {
+  font-size: 16px;
+  margin-top: 0;
+}
+
+.footer-contacto p {
+  margin-bottom: 5px;
+}
+
+.social-icons {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  list-style: none; /* Eliminar los puntos */ 
+}
+
+.social-icons li {
+  display: inline-block;
+  margin-right: 10px;  /*horizontal */
+}
+
+.social-icons li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px; /*vertical */
+}
