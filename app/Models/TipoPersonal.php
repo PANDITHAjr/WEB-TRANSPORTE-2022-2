@@ -9,9 +9,9 @@ class TipoPersonal extends Model
 {
     use HasFactory;
 
-    protected $table ='tipo_personal';
+    protected $table ='tipopersonal';
 
     public function personal(){
-        return $this->hasOne(Personal::class,'id_tipo_personal');
+        return $this->hasOne(Personal::class,'id_tipopersonal');
     }
 }
