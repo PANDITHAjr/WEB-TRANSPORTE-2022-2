@@ -23,4 +23,8 @@ class Personal extends Model
     public function venta_boleto(){
         return $this->hasMany(VentaBoleto::class,'id_personal');
     }
+
+    public function sindicato(){
+        return $this->hasOne(Sindicato::class,'id_sindicato');
+    }
 }

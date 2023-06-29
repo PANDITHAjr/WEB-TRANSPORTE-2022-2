@@ -18,10 +18,11 @@ class CreateMantenimientosTable extends Migration
             $table->string('descripcion');
             $table->string('fecha');
             $table->string('monto');
-            $table->timestamps();
 
             $table->unsignedBigInteger('id_vehiculo');
             $table->foreign('id_vehiculo')->references('id')->on('vehiculos');
+
+            $table->timestamps();
         });
     }
 
