@@ -50,13 +50,67 @@
         });
     });
 </script>
-      
+<div class="flex justify-center items-center">
+    <div class="relative w-1/2 m-4">
+      <input
+        type="text"
+        id="search"
+        placeholder="Search for..."
+        class="w-full pl-10 pr-3 rounded-md border-yellow-400 border-2 py-2.5 shadow-sm sm:text-sm text-center"
+      />
+      <span class="absolute inset-y-0 start-3 grid place-content-center">
+        <button type="button" class="text-gray-600 hover:text-gray-700">
+          <span class="sr-only">Search</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="h-4 w-4"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+            />
+          </svg>
+        </button>
+      </span>
+    </div>
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/smoothness/jquery-ui.css" />
+  
+  <script>
+    $(document).ready(function() {
+      var suggestions = [
+        "celular",
+        "computadora",
+        "laptop",
+        "router",
+        "teclado",
+        "monitor",
+        "auriculares",
+        "raton",
+        "mouse",
+      ];
+  
+      $("#search").autocomplete({
+        source: suggestions
+      });
+    });
+  </script>
+  
+
 <!-- Patrón de Tarjetas (Cards) -->
 
 <div class="grid grid-cols-4 gap-4 ">
-<div class="w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-8">
+<div class="w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-7">
   <a href="#">
-      <img class="p-4 rounded-t-lg" src="https://fulltec.com.bo/medios/2022/01/51g9OvpzDLL._SL500_.jpg" alt="product image" />
+      <img class="p-1 rounded-t-lg" src="https://fulltec.com.bo/medios/2022/01/51g9OvpzDLL._SL500_.jpg" alt="product image" />
   </a>
   <div class="px-4 pb-4 ">
       <a href="#">
@@ -70,9 +124,9 @@
   </div>
 </div>
 
-<div class="w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-8">
+<div class="w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-7">
   <a href="#">
-      <img class="p-4 rounded-t-lg" src="https://www.mitiendavision.com/images/thumbs/0129839_reloj-samsung-galaxy-watch5-40mm-silver_550.jpeg" alt="product image" />
+      <img class="p-1 rounded-t-lg" src="https://www.mitiendavision.com/images/thumbs/0129839_reloj-samsung-galaxy-watch5-40mm-silver_550.jpeg" alt="product image" />
   </a>
   <div class="px-4 pb-4">
       <a href="#">
@@ -86,9 +140,9 @@
   </div>
 </div>
 
-<div class="w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-8">
+<div class="w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-7">
   <a href="#">
-      <img class="p-4 rounded-t-lg" src="https://i.ebayimg.com/thumbs/images/g/78kAAOSwQelkG38F/s-l300.jpg" alt="product image" />
+      <img class="p-1 rounded-t-lg" src="https://i.ebayimg.com/thumbs/images/g/78kAAOSwQelkG38F/s-l300.jpg" alt="product image" />
   </a>
   <div class="px-4 pb-4">
       <a href="#">
@@ -101,25 +155,9 @@
       </div>
   </div>
 </div>
-<div class="w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-8">
+<div class="w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-7">
   <a href="#">
-      <img class="p-4 rounded-t-lg" src="https://media.admagazine.com/photos/618a5effe702c61c265bba41/master/w_1600%2Cc_limit/92014.jpg" alt="product image" />
-  </a>
-  <div class="px-4 pb-4">
-      <a href="#">
-          <h5 class="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport</h5>
-      </a>
-      
-      <div class="flex items-center justify-between">
-          <span class="text-2xl font-bold text-gray-900 dark:text-white">$599</span>
-          <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to cart</a>
-      </div>
-  </div>
-</div>
-
-<div class="w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-8">
-  <a href="#">
-      <img class="p-4 rounded-t-lg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX22Itqy-UUkvvxSzfyeHbsyvw__E2yAz5SMexPyhl6CcDxlg3E_hbi4n3HOFX2-fMpGE&usqp=CAU" alt="product image" />
+      <img class="p-1 rounded-t-lg" src="https://media.admagazine.com/photos/618a5effe702c61c265bba41/master/w_1600%2Cc_limit/92014.jpg" alt="product image" />
   </a>
   <div class="px-4 pb-4">
       <a href="#">
@@ -133,9 +171,9 @@
   </div>
 </div>
 
-<div class="w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-8">
+<div class="w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-7">
   <a href="#">
-      <img class="p-4 rounded-t-lg" src="https://www.tiendaamiga.com.bo/media/catalog/product/cache/deb88dadd509903c96aaa309d3e790dc/e/0/e06807.jpg" alt="product image" />
+      <img class="p-1 rounded-t-lg" src="https://www.blog.brickbro.com/wp-content/uploads/2022/06/pexels-shotpot-4046658-1.webp" alt="product image" />
   </a>
   <div class="px-4 pb-4">
       <a href="#">
@@ -149,9 +187,9 @@
   </div>
 </div>
 
-<div class="w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-8">
+<div class="w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-7">
   <a href="#">
-      <img class="p-4 rounded-t-lg" src="https://bgamer.pro/wp-content/uploads/2018/06/zeus-x-rgb-1-500x500.jpg" alt="product image" />
+      <img class="p-1 rounded-t-lg" src="https://www.tiendaamiga.com.bo/media/catalog/product/cache/deb88dadd509903c96aaa309d3e790dc/e/0/e06807.jpg" alt="product image" />
   </a>
   <div class="px-4 pb-4">
       <a href="#">
@@ -165,9 +203,25 @@
   </div>
 </div>
 
-<div class="w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-8">
+<div class="w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-7">
   <a href="#">
-      <img class="p-4 rounded-t-lg" src="https://http2.mlstatic.com/D_NQ_NP_807067-MLA49783062047_042022-O.webp" alt="product image" />
+      <img class="p-1 rounded-t-lg" src="https://bgamer.pro/wp-content/uploads/2018/06/zeus-x-rgb-1-500x500.jpg" alt="product image" />
+  </a>
+  <div class="px-4 pb-4">
+      <a href="#">
+          <h5 class="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport</h5>
+      </a>
+      
+      <div class="flex items-center justify-between">
+          <span class="text-2xl font-bold text-gray-900 dark:text-white">$599</span>
+          <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to cart</a>
+      </div>
+  </div>
+</div>
+
+<div class="w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-7">
+  <a href="#">
+      <img class="p-1 rounded-t-lg" src="https://http2.mlstatic.com/D_NQ_NP_807067-MLA49783062047_042022-O.webp" alt="product image" />
   </a>
   <div class="px-4 pb-4">
       <a href="#">

@@ -9,8 +9,14 @@ body {
   .dropdown-menu {
     position: relative;
     float: right;
+ 
   }
   
+
+
+
+
+
   .dropdown-toggle {
     float: right;
     width: 110px;
@@ -19,21 +25,40 @@ body {
     background-color: #3c9bdb;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     border: 1px solid #fdfcfc;
-    font-family: Arial,Helvetica,sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .dropdown-toggle:hover {
+    background-color: #3498db;
   }
   
   .dropdown-menu-content {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    right: 0; /* Alinea el menú a la derecha */
-    padding: 5px; /* Añade un espaciado interno al menú */
-    white-space: nowrap; /* Evita que los elementos se dividan en varias líneas */
-    margin-top: 50px; /* Añade un espacio entre el botón y el contenido del menú */
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 0;
+  padding: 5px;
+  white-space: nowrap;
+  margin-top: 50px;
 }
+
+.dropdown-menu-content li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 5px;
+  transition: background-color 0.3s;
+}
+
+.dropdown-menu-content li a:hover {
+  background-color: #d4474787;
+}
+
 .dropdown-menu-content li a {
     text-decoration: none;
   } 
@@ -94,9 +119,11 @@ body {
     color: #333;
   }
   
-  h1 {
+  .mainh1{
     text-align: center;
   }
+
+
   
 /* Estilos para el componente de navegación del pie de página */
 footer {
@@ -143,4 +170,44 @@ text-align: center;
   color: #fff;
   text-decoration: none;
   font-size: 18px; /*vertical */
+}
+
+
+/* Patrón de Navegación por Pestañas (Tabs) */
+.tabs {
+  display: flex;
+  justify-content: center;
+  background-color: #c5e1f0;
+  padding: 10px 0;
+}
+.tab-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+  border: 1px solid #070d3a;
+  margin: 5px;
+  border-radius: 20px; /* Aumenta el valor para hacer los bordes más curveados */
+}
+
+
+.tab-button:hover {
+  background-color: #489fb3ae;
+}
+
+
+.tab-content {
+  display: none;
+  padding: 20px;
+}
+
+
+
+/* patron ui menu despeglable */
+.dropdown-menu{
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }

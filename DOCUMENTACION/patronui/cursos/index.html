@@ -2,29 +2,74 @@
 <html>
 <head>
   <title>Plataforma de Cursos en Línea</title>
+
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-eCjT0+q83EYn8G2t9+HcWdZJ8RTAeb6+b1vUk/i7qDfK9bOMYpjL6hGnL+fuVnUT" crossorigin="anonymous">
   <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body> 
+
+        
+    <header class="header">
+      <!-- Implementación del Patrón de Navegación por Menú Desplegable (Dropdown Menu) -->
+      <nav class="dropdown-menu">
+        <button class="dropdown-toggle">Menu Explorar</button>
+        <ul class="dropdown-menu-content">
+          <li><a href="#">Desarrollo e Ingenieria</a></li>
+          <li><a href="#">Ingles</a></li>
+          <li><a href="#">Marketing</a></li>
+          <li><a href="#">Desarrollo Personal</a></li>
+          <li><a href="#">Diseño UI</a></li>
+          <li><a href="#">Finanzas</a></li>
+          <li><a href="#">Redes</a></li>
+          
+        </ul>
+      </nav>
+
+
+      <!-- Patrón de Navegación por Pestañas (Tabs) -->
+
+      <div class="tabs">
+      <button class="tab-button active" onclick="changeTab(event, 'tab1')">Crear cuenta</button>
+      <button class="tab-button" onclick="changeTab(event, 'tab2')">Contactanos</button>
+      <button class="tab-button" onclick="changeTab(event, 'tab2')">Empresas Aliadas</button>
+      <button class="tab-button" onclick="changeTab(event, 'tab3')">Conoce mas de nosotros</button>
+   
+    </div>
+
+    </header>
  
-  <header>
-    <!-- Implementación del Patrón de Navegación por Menú Desplegable (Dropdown Menu) -->
-    <nav class="dropdown-menu">
-      <button class="dropdown-toggle">Menu</button>
-      <ul class="dropdown-menu-content">
-        <li><a href="#">inicio</a></li>
-        <li><a href="#">Cursos en promocionn</a></li>
-        <li><a href="#">Sobre nosotros</a></li>
-      </ul>
-    </nav>
-  </header>
+ 
+ 
+  <!-- svript para patron ui Patrón de Navegación por Pestañas (Tabs) -->
+
+  <script>
+    function changeTab(evt, tabName) {
+      const tabContents = document.getElementsByClassName("tab-content");
+      for (let i = 0; i < tabContents.length; i++) {
+        tabContents[i].classList.remove("active");
+      }
+
+      const tabButtons = document.getElementsByClassName("tab-button");
+      for (let i = 0; i < tabButtons.length; i++) {
+        tabButtons[i].classList.remove("active");
+      }
+
+      document.getElementById(tabName).classList.add("active");
+      evt.currentTarget.classList.add("active");
+    }
+  </script>
+
+
 
   <main>
-    <h1 class="mainh1">Cursos Disponibles</h1>
-    <section class="card-container">
+    <div>
+    <h1 class="mainh1 ">Cursos Disponibles</h1>
+  </div>
 
-      
+    <section class="card-container">
+ 
       <!-- Implementación del Patrón de Tarjetas (Cards) -->
       <div class="card">
         <img src="https://4.bp.blogspot.com/-jDcqEFr898k/XBAeeuO_B3I/AAAAAAAAAEM/ugCkZsDFoN8_HGj34Mcs6O61GvNDzcKaACLcBGAs/s1600/phpCode.png" alt="Curso de Programación">
