@@ -16,8 +16,8 @@
                                 <span class="card-title">POR UN</span>
                             </div>
                             <div class="card-action">
-                                <a href="{{ route('ventaboleto.index') }}", class="btn btn-floating red pulse"><i class="material-icons">confirmation_number</i></a>
-                                <a style="color:brown; font-size: 14px; font-family: Georgia;">VENDER BOLETO</a>
+                                <a href="{{ route('personal.index') }}", class="btn btn-floating red pulse"><i class="material-icons">confirmation_number</i></a>
+                                <a style="color:brown; font-size: 14px; font-family: Georgia;">PERSONAL</a>
                             </div>
                         </div>
                     </div>
@@ -33,8 +33,8 @@
                                 <span class="card-title">VIAJE</span>
                             </div>
                             <div class="card-action">
-                                <a href="{{ route('salida.index') }}", class="btn btn-floating yellow pulse"><i class="material-icons">airport_shuttle</i></a>
-                                <a style="color:brown; font-size: 14px; font-family: Georgia;">RESG. DE SALIDAS</a>
+                                <a href="{{ route('personal.index') }}", class="btn btn-floating yellow pulse"><i class="material-icons">airport_shuttle</i></a>
+                                <a style="color:brown; font-size: 14px; font-family: Georgia;">PERSONAL</a>
                             </div>
                         </div>
                     </div>
@@ -49,8 +49,8 @@
                                 <span class="card-title">SEGURO</span>
                             </div>
                             <div class="card-action">
-                                <a href="{{ route('conductor.index') }}", class="btn btn-floating green pulse"><i class="material-icons">airline_seat_recline_normal</i></a>
-                                <a style="color:brown; font-size: 14px; font-family: Georgia;"> CHOFERES</a>
+                                <a href="{{ route('personal.index') }}", class="btn btn-floating green pulse"><i class="material-icons">airline_seat_recline_normal</i></a>
+                                <a style="color:brown; font-size: 14px; font-family: Georgia;"> PERSONAL</a>
                             </div>
                         </div>
                     </div>

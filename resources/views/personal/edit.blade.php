@@ -1,6 +1,5 @@
 @extends('layouts.app')
 @section('content')
-
     <div class="row">
         <form method="POST" action="{{ route('personal.update', [$personal->id]) }}">
             @csrf
@@ -12,14 +11,24 @@
                     <div class="card-content">
                         <span class="card-title primary-text-color primary-text-style">
                             Formulario de Edición
-                            </span>
+                        </span>
                         <div class="row">
                             <div class="col s12 divider"></div>
                         </div>
 
+                        <div class="input-field col s12 m6">
+                            <input id="ci" type="text" class="validate" name="ci"
+                                value="{{ $personal->ci }}">
+                            <label for="ci">CI:</label>
+                            @error('ci')
+                                <span class="help-block red-text"> {{ $message }} </span>
+                            @enderror
+                        </div>
+
                         <div class="row">
                             <div class="input-field col s12 m6">
-                                <input id="nombre" type="text" class="validate" name="nombre" value="{{ $personal->nombre }}">
+                                <input id="nombre" type="text" class="validate" name="nombre"
+                                    value="{{ $personal->nombre }}">
                                 <label for="nombre">Nombres:</label>
                                 @error('nombre')
                                     <span class="help-block red-text"> {{ $message }} </span>
@@ -27,34 +36,38 @@
                             </div>
 
                             <div class="input-field col s12 m6">
-                                <input id="apellido" type="text" class="validate" name="apellido" value="{{ $personal->apellido }}">
+                                <input id="apellido" type="text" class="validate" name="apellido"
+                                    value="{{ $personal->apellido }}">
                                 <label for="apellido">Apellidos:</label>
                                 @error('apellido')
-                                <span class="help-block red-text"> {{ $message }} </span>
+                                    <span class="help-block red-text"> {{ $message }} </span>
                                 @enderror
                             </div>
 
                             <div class="input-field col s12 m6">
-                                <input id="direccion" type="text" class="validate" name="direccion" value="{{ $personal->direccion }}">
+                                <input id="direccion" type="text" class="validate" name="direccion"
+                                    value="{{ $personal->direccion }}">
                                 <label for="direccion">Dirección:</label>
                                 @error('direccion')
-                                <span class="help-block red-text"> {{ $message }} </span>
+                                    <span class="help-block red-text"> {{ $message }} </span>
                                 @enderror
                             </div>
 
                             <div class="input-field col s12 m6">
-                                <input id="edad" type="number" class="validate" name="edad" value="{{ $personal->edad }}">
+                                <input id="edad" type="number" class="validate" name="edad"
+                                    value="{{ $personal->edad }}">
                                 <label for="edad">Edad:</label>
                                 @error('edad')
-                                <span class="help-block red-text"> {{ $message }} </span>
+                                    <span class="help-block red-text"> {{ $message }} </span>
                                 @enderror
                             </div>
 
                             <div class="input-field col s12 m6">
-                                <input id="phone" type="number" class="validate" name="telefono" value="{{ $personal->telefono }}">
+                                <input id="phone" type="number" class="validate" name="telefono"
+                                    value="{{ $personal->telefono }}">
                                 <label for="phone">Telefono:</label>
                                 @error('telefono')
-                                <span class="help-block red-text"> {{ $message }} </span>
+                                    <span class="help-block red-text"> {{ $message }} </span>
                                 @enderror
                             </div>
 
@@ -62,19 +75,20 @@
                             <div class="input-field col s12 m6">
                                 <select name="id_tipo_personal">
                                     <option selected disabled>Seleccione una opción:</option>
-                                    @foreach($tipo_personal as $personal)
-                                    <option value="{{ $personal->id }}">{{ $personal->descripcion}}</option>
+                                    @foreach ($tipopersonal as $personal)
+                                        <option value="{{ $personal->id }}">{{ $personal->descripcion }}</option>
                                     @endforeach
                                 </select>
                                 <label for="id_tipo_personal">Personal:</label>
-                            </div> 
+                            </div>
 
-                          
+
 
                         </div>
 
                         <div class="card-action right-align">
-                            <button type="submit" class="btn-floating btn-large blue pulse"><i class="material-icons">save</i></a>
+                            <button type="submit" class="btn-floating btn-large blue pulse"><i
+                                    class="material-icons">save</i></a>
                         </div>
                     </div>
 
@@ -83,6 +97,4 @@
 
         </form>
     </div>
-
-
 @endsection

@@ -4,7 +4,7 @@
 
 
     <div class="row">
-        <form method="POST" action="{{ route('tipo_personal.update', [$tipo_personal->id]) }}">
+        <form method="POST" action="{{ route('tipopersonal.update', [$tipopersonal->id]) }}">
             @csrf
             @method('PUT')
 
@@ -21,7 +21,7 @@
 
                         <div class="row">
                             <div class="input-field col s12 m6">
-                                <input id="descripcion" type="text" class="validate" name="descripcion" value="{{ $tipo_personal->descripcion }}">
+                                <input id="descripcion" type="text" class="validate" name="descripcion" value="{{ $tipopersonal->descripcion }}">
                                 <label for="descripcion">Descripcion:</label>
                                 @error('descripcion')
                                     <span class="help-block red-text"> {{ $message }} </span>
