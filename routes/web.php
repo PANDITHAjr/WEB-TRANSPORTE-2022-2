@@ -3,6 +3,7 @@ use App\Http\Controllers\VehiculoController;
 use App\Http\Controllers\ConductorController;
 use App\Http\Controllers\PersonalController;
 use App\Http\Controllers\TipoPersonalController;
+use App\Http\Controllers\SindicatoController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -88,6 +89,18 @@ Route::middleware(['auth'])->group(function(){
         Route::get('/{id}/edit', [VehiculoController::class, 'edit'])->name('vehiculo.edit');
         Route::put('/{id}', [VehiculoController::class, 'update'])->name('vehiculo.update');
         Route::get('/{id}/destroy', [VehiculoController::class, 'destroy'])->name('vehiculo.destroy');
+
+    });
+
+    Route::group(['prefix'=>'sindicato'], function(){
+
+        Route::get('/', [SindicatoController::class, 'index'])->name('sindicato.index');
+        Route::get('/create', [SindicatoController::class, 'create']) -> name('sindicato.create');
+        Route::post('/', [SindicatoController::class, 'store'])->name('sindicato.store');
+        Route::get('/{id}', [SindicatoController::class, 'show'])->name('sindicato.show');
+        Route::get('/{id}/edit', [SindicatoController::class, 'edit'])->name('sindicato.edit');
+        Route::put('/{id}', [SindicatoController::class, 'update'])->name('sindicato.update');
+        Route::get('/{id}/destroy', [SindicatoController::class, 'destroy'])->name('sindicato.destroy');
 
     });
 
