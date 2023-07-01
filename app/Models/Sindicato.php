@@ -11,4 +11,15 @@ class Sindicato extends Model
 
     protected $table = 'sindicatos';
 
+    public function personal(){
+        return $this->hasMany(Personal::class,'id_sindicato');
+    }
+
+    public function vehiculo(){
+        return $this->hasMany(Vehiculo::class,'id_sindicato');
+    }
+
+    public function rutasindicato(){
+        return $this->hasMany(Rutasindicato::class,'id_sindicato');
+    }
 }

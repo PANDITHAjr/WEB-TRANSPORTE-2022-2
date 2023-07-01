@@ -20,12 +20,15 @@ class PersonalController extends Controller
     }
     public function store(Request $request){
         $personal = new Personal();
+        $personal->ci = $request->input('ci');
         $personal->nombre = $request->input('nombre');
         $personal->apellido = $request->input('apellido');
         $personal->edad = $request->input('edad');
         $personal->telefono = $request->input('telefono');
         $personal->direccion = $request->input('direccion');
+        $personal->cat_lic = $request->input('cat_lic');
         $personal->id_tipo_personal = $request->input('id_tipo_personal');
+        $personal->id_sindicato = $request->input('id_sindicato');
         $personal->save();
 
         return redirect()->route('personal.index', $personal->id);
@@ -44,12 +47,15 @@ class PersonalController extends Controller
     }
     public function update(Request $request, $id){
         $personal = Personal::findOrFail($id);
+        $personal->ci = $request->input('ci');
         $personal->nombre = $request->input('nombre');
         $personal->apellido = $request->input('apellido');
         $personal->edad = $request->input('edad');
         $personal->telefono = $request->input('telefono');
         $personal->direccion = $request->input('direccion');
+        $personal->cat_lic = $request->input('cat_lic');
         $personal->id_tipo_personal = $request->input('id_tipo_personal');
+        $personal->id_sindicato = $request->input('id_sindicato');
         $personal->save();
 
         return redirect()->route('personal.index');

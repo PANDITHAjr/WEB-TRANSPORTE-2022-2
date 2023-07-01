@@ -16,15 +16,15 @@ class Personal extends Model
         return $this->hasOne(User::class,'id_personal');
     }
 
-    public function tipo_personal(){
-        return $this->belongsTo(TipoPersonal::class,'id_tipo_personal');
+    public function Vehiculo(){
+        return $this->hasOne(Vehiculo::class,'id_personal');
     }
 
-    public function venta_boleto(){
-        return $this->hasMany(VentaBoleto::class,'id_personal');
+    public function tipo_personal(){
+        return $this->belongsTo(TipoPersonal::class,'id_tipopersonal');
     }
 
     public function sindicato(){
-        return $this->hasOne(Sindicato::class,'id_sindicato');
+        return $this->belongsTo(Sindicato::class,'id_sindicato');
     }
 }

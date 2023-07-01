@@ -7,53 +7,53 @@ use Illuminate\Http\Request;
 
 class TipoPersonalController extends Controller
 {
-   
+
     public function index()
     {
-        $tipo_personales = TipoPersonal::all();
+        $tipopersonales = TipoPersonal::all();
 
-        return view('tipo_personal.index', compact('tipo_personales'));
-    } 
+        return view('tipopersonal.index', compact('tipopersonales'));
+    }
 
     public function create()
     {
-        return view('tipo_personal.create');
+        return view('tipopersonal.create');
     }
 
     public function store(Request $request)
     {
-        $tipo_personal = new TipoPersonal();
-        $tipo_personal->descripcion = $request->input('descripcion');
-        $tipo_personal->save();
+        $tipopersonal = new TipoPersonal();
+        $tipopersonal->descripcion = $request->input('descripcion');
+        $tipopersonal->save();
 
-        return redirect()->route('tipo_personal.index');
+        return redirect()->route('tipopersonal.index');
     }
 
     public function show($id)
     {
-        $tipo_personal = TipoPersonal::findOrFail($id);
-        return view('tipo_personal.show', compact('tipo_personal'));
+        $tipopersonal = TipoPersonal::findOrFail($id);
+        return view('tipopersonal.show', compact('tipopersonal'));
     }
 
     public function edit($id)
     {
-        $tipo_personal = TipoPersonal::findOrFail($id);
-        return view('tipo_personal.edit', compact('tipo_personal'));
+        $tipopersonal = TipoPersonal::findOrFail($id);
+        return view('tipopersonal.edit', compact('tipopersonal'));
     }
 
     public function update(Request $request, $id)
     {
-        $tipo_personal = TipoPersonal::findOrFail($id);
-        $tipo_personal->descripcion = $request->input('descripcion');
-        $tipo_personal->save();
+        $tipopersonal = TipoPersonal::findOrFail($id);
+        $tipopersonal->descripcion = $request->input('descripcion');
+        $tipopersonal->save();
 
-        return redirect()->route('tipo_personal.index');
+        return redirect()->route('tipopersonal.index');
     }
     public function destroy($id)
     {
-        $tipo_personal = TipoPersonal::findOrFail($id);
-        $tipo_personal->delete();
+        $tipopersonal = TipoPersonal::findOrFail($id);
+        $tipopersonal->delete();
 
-        return redirect()->route('tipo_personal.index');
+        return redirect()->route('tipopersonal.index');
     }
 }

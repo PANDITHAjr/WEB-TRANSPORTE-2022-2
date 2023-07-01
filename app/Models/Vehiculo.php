@@ -9,9 +9,17 @@ class Vehiculo extends Model
 {
     use HasFactory;
 
-    protected $table ='vehiculo';
+    protected $table ='vehiculos';
 
-    public function venta_boleto(){
-        return $this->hasMany(VentaBoleto::class,'id_vehiculo');
+    public function sindicato(){
+        return $this->belongsTo(Sindicato::class,'id_sindicato');
+    }
+
+    public function personal(){
+        return $this->belongsTo(Personal::class,'id_personal');
+    }
+
+    public function mantenimiento(){
+        return $this->hasMany(Mantenimiento::class,'id_vehiculo');
     }
 }

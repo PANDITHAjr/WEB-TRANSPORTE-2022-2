@@ -12,6 +12,6 @@ class TipoPersonal extends Model
     protected $table ='tipopersonal';
 
     public function personal(){
-        return $this->hasOne(Personal::class,'id_tipopersonal');
+        return $this->hasMany(Personal::class,'id_tipopersonal');
     }
 }

@@ -25,9 +25,13 @@ class VehiculoController extends Controller
     public function store(Request $request)
     {
         $vehiculo = new vehiculo();
+        $vehiculo->linea = $request->input('linea');
         $vehiculo->placa = $request->input('placa');
+        $vehiculo->marca = $request->input('marca');
         $vehiculo->modelo = $request->input('modelo');
         $vehiculo->descripcion = $request->input('descripcion');
+        $vehiculo->id_personal = $request->input('id_personal');
+        $vehiculo->id_sindicato = $request->input('id_sindicato');
         $vehiculo->save();
 
         return redirect()->route('vehiculo.index');
@@ -42,9 +46,13 @@ class VehiculoController extends Controller
     public function update(Request $request, $id)
     {
         $vehiculo = vehiculo::findOrFail($id);
+        $vehiculo->linea = $request->input('linea');
         $vehiculo->placa = $request->input('placa');
+        $vehiculo->marca = $request->input('marca');
         $vehiculo->modelo = $request->input('modelo');
         $vehiculo->descripcion = $request->input('descripcion');
+        $vehiculo->id_personal = $request->input('id_personal');
+        $vehiculo->id_sindicato = $request->input('id_sindicato');
         $vehiculo->save();
 
         return redirect()->route('vehiculo.index');
