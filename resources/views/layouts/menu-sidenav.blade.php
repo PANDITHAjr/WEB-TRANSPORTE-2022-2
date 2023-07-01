@@ -18,11 +18,11 @@
         </div>
     </li>
     <li><a class="subheader yellow-text">Administración</a></li>
-    <li><a class="waves-effect white-text" href="{{ route('conductor.index') }}">Gestionar conductores<i class="material-icons">group</i></a></li>
+
     <li><a class="waves-effect white-text" href="{{ route('usuario.index') }}">Gestionar Usuario<i class="material-icons">class</i></a></li>
     <li><a class="waves-effect white-text" href="{{ route('personal.index') }}">Gestionar Personal<i class="material-icons">assignment_ind</i></a></li>
     <li><a class="waves-effect white-text" href="{{ route('vehiculo.index') }}">Gestionar vehiculos<i class="material-icons">class</i></a></li>
-    <li><a class="waves-effect white-text" href="{{ route('tipo_personal.index') }}">Gestionar Tipo Personal<i class="material-icons">group</i></a></li>
+    <li><a class="waves-effect white-text" href="{{ route('tipopersonal.index') }}">Gestionar Tipo Personal<i class="material-icons">group</i></a></li>
 
 
 
