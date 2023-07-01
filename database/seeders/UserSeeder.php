@@ -47,7 +47,7 @@ class UserSeeder extends Seeder
         $personal->telefono = '74668051';
         $personal->direccion = 'camiri';
         $personal->id_sindicato = '1';
-        $personal->id_tipo_personal = '1';
+        $personal->id_tipopersonal = '1';
         $personal->save();
 
         $user = new User();
@@ -67,7 +67,7 @@ class UserSeeder extends Seeder
         $personal->telefono = '76565234';
         $personal->direccion = 'camiri';
         $personal->id_sindicato = '1';
-        $personal->id_tipo_personal = '1';
+        $personal->id_tipopersonal = '1';
         $personal->save();
 
         $user = new User();
@@ -88,7 +88,7 @@ class UserSeeder extends Seeder
         $personal->telefono = '67671718';
         $personal->direccion = 'camiri';
         $personal->id_sindicato = '1';
-        $personal->id_tipo_personal = '1';
+        $personal->id_tipopersonal = '1';
         $personal->save();
 
         $user = new User();
