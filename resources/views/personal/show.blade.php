@@ -23,7 +23,7 @@
                         </div>
                     </div>
                         <div class="row">
-                            
+
                             <div class="col s12 m5">
                                 <p class="primary-text-color secondary-text-style">Nombres:</p>
                             </div>
@@ -31,8 +31,8 @@
                                 <p class="secondary-text-color">{{$personal->nombre}}</p>
                             </div>
 
-                            
-                                
+
+
                             <div class="col s12 m5">
                                 <p class="primary-text-color secondary-text-style">Apellidos:</p>
                             </div>
@@ -48,14 +48,35 @@
                             </div>
 
 
-                        
+
                             <div class="col s12 m5">
                                 <p class="primary-text-color secondary-text-style">Edad:</p>
                             </div>
                             <div class="col s8 offset-s2 m7">
                                 <p class="secondary-text-color">{{$personal->edad}}</p>
-                            </div> 
+                            </div>
 
+
+                            <div class="col s12 m5">
+                                <p class="primary-text-color secondary-text-style">C. Licencia:</p>
+                            </div>
+                            <div class="col s8 offset-s2 m7">
+                                <p class="secondary-text-color">{{$personal->cat_lic}}</p>
+                            </div>
+
+                            <div class="col s12 m5">
+                                <p class="primary-text-color secondary-text-style">CI:</p>
+                            </div>
+                            <div class="col s8 offset-s2 m7">
+                                <p class="secondary-text-color">{{$personal->ci}}</p>
+                            </div>
+
+                            <div class="col s12 m5">
+                                <p class="primary-text-color secondary-text-style">Tipo Personal:</p>
+                            </div>
+                            <div class="col s8 offset-s2 m7">
+                                <p class="secondary-text-color">{{$personal->tipo_personal->descripcion}}</p>
+                            </div>
                             {{--
 
                             <div class="col s12 m5">
@@ -72,7 +93,7 @@
                                 <p class="secondary-text-color">{{$personal->id_tipo_personal}}</p>
                             </div>
                             --}}
-                        
+
                     </div>
                     <div class="card-action right-align">
                         <a href="{{ route('personal.index') }}" class="waves-effect waves-brown btn-flat red-text bold">Atras</a>

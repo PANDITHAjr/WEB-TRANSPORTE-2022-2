@@ -71,18 +71,34 @@
                                 @enderror
                             </div>
 
+                            <div class="input-field col s12 m6">
+                                <input id="cat_lic" type="text" class="cat_lic" name="cat_lic"
+                                    value="{{ $personal->cat_lic }}">
+                                <label for="cat_lic">C. Lic:</label>
+                                @error('cat_lic')
+                                    <span class="help-block red-text"> {{ $message }} </span>
+                                @enderror
+                            </div>
 
                             <div class="input-field col s12 m6">
-                                <select name="id_tipo_personal">
+                                <select name="id_tipopersonal">
                                     <option selected disabled>Seleccione una opción:</option>
                                     @foreach ($tipopersonal as $personal)
                                         <option value="{{ $personal->id }}">{{ $personal->descripcion }}</option>
                                     @endforeach
                                 </select>
-                                <label for="id_tipo_personal">Personal:</label>
+                                <label for="id_tipopersonal">Personal:</label>
                             </div>
 
-
+                            <div class="input-field col s12 m6">
+                                <select name="id_sindicato">
+                                    <option selected disabled>Seleccione una opción:</option>
+                                    @foreach ($sindicato as $personal)
+                                        <option value="{{ $personal->id }}">{{ $personal->nombre }}</option>
+                                    @endforeach
+                                </select>
+                                <label for="id_sindicato">Sindicatos:</label>
+                            </div>
 
                         </div>
 

@@ -74,13 +74,13 @@
                             </div>
 
                             <div class="input-field col s12 m6">
-                                <select name="id_tipo_personal">
+                                <select name="id_tipopersonal">
                                     <option selected disabled>Seleccione una opción:</option>
                                     @foreach($tipopersonal as $personal)
                                     <option value="{{ $personal->id }}">{{ $personal->descripcion}}</option>
                                     @endforeach
                                 </select>
-                                <label for="id_tipo_personal">Personal:</label>
+                                <label for="id_tipopersonal">Personal:</label>
                             </div>
 
                             <div class="input-field col s12 m6">
@@ -90,7 +90,7 @@
                                     <option value="{{ $personal->id }}">{{ $personal->nombre}}</option>
                                     @endforeach
                                 </select>
-                                <label for="id_tipo_personal">Sindicato:</label>
+                                <label for="id_sindicato">Sindicato:</label>
                             </div>
 
                         </div>

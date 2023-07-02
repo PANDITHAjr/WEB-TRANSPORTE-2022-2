@@ -29,7 +29,7 @@ class PersonalController extends Controller
         $personal->telefono = $request->input('telefono');
         $personal->direccion = $request->input('direccion');
         $personal->cat_lic = $request->input('cat_lic');
-        $personal->id_tipo_personal = $request->input('id_tipopersonal');
+        $personal->id_tipopersonal = $request->input('id_tipopersonal');
         $personal->id_sindicato = $request->input('id_sindicato');
         $personal->save();
 
