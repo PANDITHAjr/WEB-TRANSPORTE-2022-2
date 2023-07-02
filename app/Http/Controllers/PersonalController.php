@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Personal;
 use App\Models\TipoPersonal;
+use App\Models\Sindicato;
 use Illuminate\Http\Request;
 
 class PersonalController extends Controller
@@ -15,8 +16,9 @@ class PersonalController extends Controller
     }
 
     public function create(){
-        $tipo_personal = TipoPersonal::all();
-        return view('personal.create', compact('tipo_personal'));
+        $tipopersonal = TipoPersonal::all();
+        $sindicato = Sindicato::all();
+        return view('personal.create', compact('tipopersonal'), compact('sindicato'));
     }
     public function store(Request $request){
         $personal = new Personal();
@@ -27,7 +29,7 @@ class PersonalController extends Controller
         $personal->telefono = $request->input('telefono');
         $personal->direccion = $request->input('direccion');
         $personal->cat_lic = $request->input('cat_lic');
-        $personal->id_tipo_personal = $request->input('id_tipo_personal');
+        $personal->id_tipo_personal = $request->input('id_tipopersonal');
         $personal->id_sindicato = $request->input('id_sindicato');
         $personal->save();
 
@@ -42,8 +44,9 @@ class PersonalController extends Controller
     public function edit($id){
 
         $personal = Personal::findOrFail($id);
-        $tipo_personal = TipoPersonal::all();
-        return view('personal.edit', compact('personal','tipo_personal'));
+        $tipopersonal = TipoPersonal::all();
+        $sindicato = Sindicato::all();
+        return view('personal.edit', compact('personal','tipopersonal'), compact('personal','sindicato'));
     }
     public function update(Request $request, $id){
         $personal = Personal::findOrFail($id);
@@ -54,7 +57,7 @@ class PersonalController extends Controller
         $personal->telefono = $request->input('telefono');
         $personal->direccion = $request->input('direccion');
         $personal->cat_lic = $request->input('cat_lic');
-        $personal->id_tipo_personal = $request->input('id_tipo_personal');
+        $personal->id_tipopersonal = $request->input('id_tipopersonal');
         $personal->id_sindicato = $request->input('id_sindicato');
         $personal->save();
 

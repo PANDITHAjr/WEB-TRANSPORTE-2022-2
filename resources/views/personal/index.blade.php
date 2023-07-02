@@ -18,8 +18,9 @@
                         <th>Apellido</th>
                         <th>Edad</th>
                         <th>Telefono</th>
-                        <th>Direccion</th>
+                        <th>CI</th>
                         <th>Tipo de Personal</th>
+                        <th>C. Licencia</th>
                         <th>Acciones</th>
                     </tr>
                     </thead>
@@ -31,7 +32,8 @@
                                 <td>{{ $persona->apellido }}</td>
                                 <td>{{ $persona->edad }}</td>
                                 <td>{{ $persona->telefono }}</td>
-                                <td>{{ $persona->direccion }}</td>
+                                <td>{{ $persona->ci }}</td>
+                                <td>{{ $persona->cat_lic }}</td>
                                 <td>{{ $persona->tipo_personal->descripcion }}</td>
                                 <td>
                                         {{-- <a href="{{ route('personal.show', [$persona->id]) }}"><span class="new badge teal" data-badge-caption="ver"></span></a>  --}}
