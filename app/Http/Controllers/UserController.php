@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Personal;
 use App\Models\User;
+use App\Models\users;
 use Database\Seeders\UserSeeder;
 use Illuminate\Http\Request;
 

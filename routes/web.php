@@ -3,6 +3,7 @@ use App\Http\Controllers\VehiculoController;
 use App\Http\Controllers\ConductorController;
 use App\Http\Controllers\PersonalController;
 use App\Http\Controllers\TipoPersonalController;
+use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\SindicatoController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
@@ -33,7 +34,7 @@ Route::middleware(['auth'])->group(function(){
 
     Route::group(['prefix'=>'personal'], function(){
 
-        Route::get('/', [PersonalController::class, 'indexc'])->name('personal.indexc');
+        //Route::get('/', [PersonalController::class, 'indexc'])->name('personal.indexc');
         Route::get('/', [PersonalController::class, 'index'])->name('personal.index');
         Route::get('/create', [PersonalController::class, 'create']) -> name('personal.create');
         Route::post('/', [PersonalController::class, 'store'])->name('personal.store');
@@ -44,6 +45,12 @@ Route::middleware(['auth'])->group(function(){
 
 
     });
+    Route::group(['prefix'=>'cliente'], function(){
+
+        Route::get('/', [ClienteController::class, 'percli'])->name('cliente.index');
+
+    });
+
 
     Route::group(['prefix'=>'tipopersonal'], function(){
 

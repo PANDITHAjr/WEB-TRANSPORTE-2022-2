@@ -17,7 +17,7 @@
                     <p></p>
                     </div>
                     <div class="card-action">
-                    <a href="{{ route('personal.indexc') }}">PERSONAL</a>
+                    <a href="{{ route('cliente.index') }}">PERSONAL</a>
                     </div>
                 </div>
                 </div>
@@ -32,7 +32,7 @@
                     <p></p>
                     </div>
                     <div class="card-action">
-                    <a href="{{ route('personal.indexc') }}">CHOFERES</a>
+                    {{-- <a href="{{ route('personal.indexc') }}">CHOFERES</a> --}}
                     </div>
                 </div>
                 </div>
@@ -47,7 +47,7 @@
                     <p></p>
                     </div>
                     <div class="card-action">
-                    <a href="{{ route('personal.indexc') }}">RUTAS</a>
+                    {{-- <a href="{{ route('personal.indexc') }}">RUTAS</a> --}}
                     </div>
                 </div>
                 </div>
@@ -68,7 +68,7 @@
                     <p></p>
                     </div>
                     <div class="card-action">
-                    <a href="{{ route('personal.indexc') }}">SINDICATOS</a>
+                    {{-- <a href="{{ route('personal.indexc') }}">SINDICATOS</a> --}}
                     </div>
                 </div>
                 </div>
@@ -83,7 +83,7 @@
                     <p></p>
                     </div>
                     <div class="card-action">
-                    <a href="{{ route('personal.indexc') }}">VEHICULO</a>
+                    {{-- <a href="{{ route('personal.indexc') }}">VEHICULO</a> --}}
                     </div>
                 </div>
                 </div>
@@ -98,7 +98,7 @@
                     <p></p>
                     </div>
                     <div class="card-action">
-                    <a href="{{ route('personal.indexc') }}">PROMOCIONES</a>
+                    {{-- <a href="{{ route('personal.indexc') }}">PROMOCIONES</a> --}}
                     </div>
                 </div>
                 </div>
