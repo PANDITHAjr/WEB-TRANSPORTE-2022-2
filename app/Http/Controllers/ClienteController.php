@@ -14,4 +14,11 @@ class ClienteController extends Controller
         $personales = Personal::all();
         return view('cliente.index', compact('personales'));
     }
+
+    public function sincli()
+    {
+        $sindicatos = Sindicato::all();
+        return view('cliente.index2', compact('sindicatos'));
+
+    }
 }

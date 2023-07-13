@@ -45,9 +45,12 @@ Route::middleware(['auth'])->group(function(){
 
 
     });
+
     Route::group(['prefix'=>'cliente'], function(){
 
         Route::get('/', [ClienteController::class, 'percli'])->name('cliente.index');
+        Route::get('/', [ClienteController::class, 'sincli'])->name('cliente.index2');
+
 
     });
 

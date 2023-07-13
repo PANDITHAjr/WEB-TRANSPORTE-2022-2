@@ -32,7 +32,7 @@
                     <p></p>
                     </div>
                     <div class="card-action">
-                    {{-- <a href="{{ route('personal.indexc') }}">CHOFERES</a> --}}
+                    <a href="{{ route('cliente.index2') }}">Sindicatos</a>
                     </div>
                 </div>
                 </div>
