@@ -15,6 +15,12 @@ class PersonalController extends Controller
 
     }
 
+    public function indexc(){
+        $personales = Personal::all();
+        return view('personal.indexc', compact('personales'));
+
+    }
+
     public function create(){
         $tipopersonal = TipoPersonal::all();
         $sindicato = Sindicato::all();

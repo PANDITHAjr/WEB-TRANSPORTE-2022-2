@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 
 @section('content')
     <div class="container">
@@ -16,7 +16,7 @@
                                 <span class="card-title">holaaaa UN</span>
                             </div>
                             <div class="card-action">
-                                <a href="{{ route('personal.index') }}", class="btn btn-floating red pulse"><i class="material-icons">confirmation_number</i></a>
+                                <a href="{{ route('personal.indexc') }}", class="btn btn-floating red pulse"><i class="material-icons">confirmation_number</i></a>
                                 <a style="color:brown; font-size: 14px; font-family: Georgia;">PERSONAL</a>
                             </div>
                         </div>
@@ -33,7 +33,7 @@
                                 <span class="card-title">VIAJE</span>
                             </div>
                             <div class="card-action">
-                                <a href="{{ route('personal.index') }}", class="btn btn-floating yellow pulse"><i class="material-icons">airport_shuttle</i></a>
+                                <a href="{{ route('personal.indexc') }}", class="btn btn-floating yellow pulse"><i class="material-icons">airport_shuttle</i></a>
                                 <a style="color:brown; font-size: 14px; font-family: Georgia;">PERSONAL</a>
                             </div>
                         </div>
@@ -49,7 +49,7 @@
                                 <span class="card-title">SEGURO</span>
                             </div>
                             <div class="card-action">
-                                <a href="{{ route('personal.index') }}", class="btn btn-floating green pulse"><i class="material-icons">airline_seat_recline_normal</i></a>
+                                <a href="{{ route('personal.indexc') }}", class="btn btn-floating green pulse"><i class="material-icons">airline_seat_recline_normal</i></a>
                                 <a style="color:brown; font-size: 14px; font-family: Georgia;"> PERSONAL</a>
                             </div>
                         </div>

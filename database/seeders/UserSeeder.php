@@ -32,9 +32,34 @@ class UserSeeder extends Seeder
         $tipo_personal->descripcion = 'Chofer';
         $tipo_personal->save();
 
+        $tipo_personal = new TipoPersonal();
+        $tipo_personal->descripcion = 'Cliente';
+        $tipo_personal->save();
+
+
+
+        $tipo_personal = new TipoPersonal();
+        $tipo_personal->descripcion = 'Chofer';
+        $tipo_personal->save();
+
         $sindicato = new Sindicato();
-        $sindicato->nombre = 'Sindicato 1';
+        $sindicato->nombre = '27 de Diciembre';
         $sindicato->save();
+
+
+        $sindicato = new Sindicato();
+        $sindicato->nombre = 'Nuevo Horionte';
+        $sindicato->save();
+
+        $sindicato = new Sindicato();
+        $sindicato->nombre = 'Ivoca';
+        $sindicato->save();
+
+        $sindicato = new Sindicato();
+        $sindicato->nombre = 'Ninguno';
+        $sindicato->save();
+
+
 
 
         ////USUARIO BRAYAN
@@ -81,7 +106,7 @@ class UserSeeder extends Seeder
         /////////// USUARIO PANDA
 
         $personal = new Personal();
-        $personal->ci = '12345678';
+        $personal->ci = '7114326';
         $personal->nombre = 'Carlos Alfredo';
         $personal->apellido = 'Ramos Carballo';
         $personal->edad = '22';
@@ -98,5 +123,25 @@ class UserSeeder extends Seeder
         $user->id_personal = '3';
         $user->save();
 
+
+        /////////// USUARIO Evans
+
+        $personal = new Personal();
+        $personal->ci = '12345678';
+        $personal->nombre = 'Evans';
+        $personal->apellido = 'Balcazar';
+        $personal->edad = '30';
+        $personal->telefono = '6473833';
+        $personal->direccion = 'SC';
+        $personal->id_sindicato = '1';
+        $personal->id_tipopersonal = '1';
+        $personal->save();
+
+        $user = new User();
+        $user->name = 'Evans';
+        $user->email = 'evans@gmail.com';
+        $user->password = bcrypt('2000');
+        $user->id_personal = '4';
+        $user->save();
     }
 }
