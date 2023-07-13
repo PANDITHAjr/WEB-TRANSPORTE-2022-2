@@ -134,7 +134,7 @@ class UserSeeder extends Seeder
         $personal->telefono = '6473833';
         $personal->direccion = 'SC';
         $personal->id_sindicato = '1';
-        $personal->id_tipopersonal = '1';
+        $personal->id_tipopersonal = '4';
         $personal->save();
 
         $user = new User();

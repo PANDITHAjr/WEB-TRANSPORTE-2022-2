@@ -17,6 +17,8 @@
             </li>
         </ul>
 
+        <a href="home2" data-target="sidenav-left" class="sidenav-trigger left show-on-medium-and-up"><i class="material-icons dark-primary-color-icon">chevron_left</i></a>
+
         @endauth
 
         @yield('breadcrumb')
