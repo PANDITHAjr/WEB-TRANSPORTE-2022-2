@@ -15,10 +15,6 @@ class PersonalController extends Controller
         return view('personal.index', compact('personales'));
     }
 
-<<<<<<< HEAD
-    public function create()
-    {
-=======
     public function indexc(){
         $personales = Personal::all();
         return view('personal.indexc', compact('personales'));
@@ -26,7 +22,6 @@ class PersonalController extends Controller
     }
 
     public function create(){
->>>>>>> Panda_Roles
         $tipopersonal = TipoPersonal::all();
         $sindicato = Sindicato::all();
         return view('personal.create', compact('tipopersonal'), compact('sindicato'));
