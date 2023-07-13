@@ -9,18 +9,20 @@ use Illuminate\Http\Request;
 
 class PersonalController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         $personales = Personal::all();
         return view('personal.index', compact('personales'));
-
     }
 
-    public function create(){
+    public function create()
+    {
         $tipopersonal = TipoPersonal::all();
         $sindicato = Sindicato::all();
         return view('personal.create', compact('tipopersonal'), compact('sindicato'));
     }
-    public function store(Request $request){
+    public function store(Request $request)
+    {
         $personal = new Personal();
         $personal->ci = $request->input('ci');
         $personal->nombre = $request->input('nombre');
@@ -34,21 +36,23 @@ class PersonalController extends Controller
         $personal->save();
 
         return redirect()->route('personal.index', $personal->id);
-
     }
-    public function show($id){
+    public function show($id)
+    {
         $personal = Personal::findOrFail($id);
         return view('personal.show', compact('personal'));
     }
 
-    public function edit($id){
+    public function edit($id)
+    {
 
         $personal = Personal::findOrFail($id);
         $tipopersonal = TipoPersonal::all();
         $sindicato = Sindicato::all();
-        return view('personal.edit', compact('personal','tipopersonal'), compact('personal','sindicato'));
+        return view('personal.edit', compact('personal', 'tipopersonal'), compact('personal', 'sindicato'));
     }
-    public function update(Request $request, $id){
+    public function update(Request $request, $id)
+    {
         $personal = Personal::findOrFail($id);
         $personal->ci = $request->input('ci');
         $personal->nombre = $request->input('nombre');
@@ -63,7 +67,8 @@ class PersonalController extends Controller
 
         return redirect()->route('personal.index');
     }
-    public function destroy($id){
+    public function destroy($id)
+    {
         $personal = Personal::findOrFail($id);
         $personal->delete();
 
