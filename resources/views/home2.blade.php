@@ -1,110 +1,62 @@
 @extends('layouts.app2')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
 
+                <div class="row">
 
-            <div class="row">
-                <div class="col s12 m4">
-                <div class="card">
-                    <div class="card-image">
-                    <img src="https://images3.alphacoders.com/131/1316225.jpg">
-                    <span class="card-title"></span>
+                    <br>
+                    <br>
+                    <div class="col s12 m4">
+                        <div class="card">
+                            <div class="card-image">
+                                <img class="card-img" src="{{ asset('images/ferrari.jpg') }}">
+                                <span class="card-title">CARLOS</span>
+                            </div>
+                            <div class="card-action">
+                                <a href="{{ route('personal.index') }}", class="btn btn-floating red pulse"><i class="material-icons">confirmation_number</i></a>
+                                <a style="color:brown; font-size: 14px; font-family: Georgia;">PERSONAL</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-content">
-                    <p></p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="col s12 m4">
+                        <div class="card">
+                            <div class="card-image">
+
+                                <img class="card-img" src="{{ asset('images/toyo.png') }}">
+                                <span class="card-title">WEIMAR</span>
+                            </div>
+                            <div class="card-action">
+                                <a href="{{ route('personal.index') }}", class="btn btn-floating yellow pulse"><i class="material-icons">airport_shuttle</i></a>
+                                <a style="color:brown; font-size: 14px; font-family: Georgia;">PERSONAL</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-action">
-                    <a href="{{ route('cliente.index') }}">PERSONAL</a>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="col s12 m4">
+                        <div class="card">
+                            <div class="card-image">
+                                <img class="card-img" src="{{ asset('images/nisan.png') }}">
+                                <span class="card-title">AYELEN</span>
+                            </div>
+                            <div class="card-action">
+                                <a href="{{ route('personal.index') }}", class="btn btn-floating green pulse"><i class="material-icons">airline_seat_recline_normal</i></a>
+                                <a style="color:brown; font-size: 14px; font-family: Georgia;"> PERSONAL</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
                 </div>
 
-                <div class="col s12 m4">
-                <div class="card">
-                    <div class="card-image">
-                    <img src="https://images3.alphacoders.com/131/1316225.jpg">
-                    <span class="card-title"></span>
-                    </div>
-                    <div class="card-content">
-                    <p></p>
-                    </div>
-                    <div class="card-action">
-                    <a href="{{ route('cliente.index2') }}">Sindicatos</a>
-                    </div>
-                </div>
-                </div>
-
-                <div class="col s12 m4">
-                <div class="card">
-                    <div class="card-image">
-                    <img src="https://images3.alphacoders.com/131/1316225.jpg">
-                    <span class="card-title"></span>
-                    </div>
-                    <div class="card-content">
-                    <p></p>
-                    </div>
-                    <div class="card-action">
-                    {{-- <a href="{{ route('personal.indexc') }}">RUTAS</a> --}}
-                    </div>
-                </div>
-                </div>
             </div>
-
-
-
-
-
-            <div class="row">
-                <div class="col s12 m4">
-                <div class="card">
-                    <div class="card-image">
-                    <img src="https://images3.alphacoders.com/131/1316225.jpg">
-                    <span class="card-title"></span>
-                    </div>
-                    <div class="card-content">
-                    <p></p>
-                    </div>
-                    <div class="card-action">
-                    {{-- <a href="{{ route('personal.indexc') }}">SINDICATOS</a> --}}
-                    </div>
-                </div>
-                </div>
-
-                <div class="col s12 m4">
-                <div class="card">
-                    <div class="card-image">
-                    <img src="https://images3.alphacoders.com/131/1316225.jpg">
-                    <span class="card-title"></span>
-                    </div>
-                    <div class="card-content">
-                    <p></p>
-                    </div>
-                    <div class="card-action">
-                    {{-- <a href="{{ route('personal.indexc') }}">VEHICULO</a> --}}
-                    </div>
-                </div>
-                </div>
-
-                <div class="col s12 m4">
-                <div class="card">
-                    <div class="card-image">
-                    <img src="https://images3.alphacoders.com/131/1316225.jpg">
-                    <span class="card-title"></span>
-                    </div>
-                    <div class="card-content">
-                    <p></p>
-                    </div>
-                    <div class="card-action">
-                    {{-- <a href="{{ route('personal.indexc') }}">PROMOCIONES</a> --}}
-                    </div>
-                </div>
-                </div>
-            </div>
-
         </div>
     </div>
-</div>
 @endsection

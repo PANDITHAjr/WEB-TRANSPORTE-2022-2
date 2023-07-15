@@ -37,27 +37,27 @@ class LoginController extends Controller
      *
      * @return void
      */
+    // public function __construct()
+    // {
+    //     $this->middleware('guest')->except('logout');
+    // }
+
+
+     protected function redirectTo()
+     {
+         if (auth()->check()) {
+             $user = auth()->user();
+
+            if ($user->personal && $user->personal->tipo_personal->descripcion == 'Cliente') {
+                return RouteServiceProvider::HOME2;
+            }
+        }
+
+        return RouteServiceProvider::HOME;
+    }
+
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
     }
-
-
-//     protected function redirectTo()
-//     {
-//         if (auth()->check()) {
-//             $user = auth()->user();
-
-//             if ($user->personal && $user->personal->tipo_personal->descripcion == 'Cliente') {
-//                 return RouteServiceProvider::HOME2;
-//             }
-//         }
-
-//         return RouteServiceProvider::HOME;
-//     }
-
-//     public function __construct()
-//     {
-//         $this->middleware('guest')->except('logout');
-//     }
 }
