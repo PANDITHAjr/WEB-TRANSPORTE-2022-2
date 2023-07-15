@@ -43,21 +43,21 @@ class LoginController extends Controller
     }
 
 
-    // protected function redirectTo()
-    // {
-    //     if (auth()->check()) {
-    //         $user = auth()->user();
+//     protected function redirectTo()
+//     {
+//         if (auth()->check()) {
+//             $user = auth()->user();
 
-    //         if ($user->personal && $user->personal->tipo_personal->descripcion == 'Cliente') {
-    //             return RouteServiceProvider::HOME2;
-    //         }
-    //     }
+//             if ($user->personal && $user->personal->tipo_personal->descripcion == 'Cliente') {
+//                 return RouteServiceProvider::HOME2;
+//             }
+//         }
 
-    //     return RouteServiceProvider::HOME;
-    // }
+//         return RouteServiceProvider::HOME;
+//     }
 
-    // public function __construct()
-    // {
-    //     $this->middleware('guest')->except('logout');
-    // }
+//     public function __construct()
+//     {
+//         $this->middleware('guest')->except('logout');
+//     }
 }
