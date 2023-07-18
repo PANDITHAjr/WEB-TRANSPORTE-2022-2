@@ -34,7 +34,6 @@ Route::middleware(['auth'])->group(function(){
 
     Route::group(['prefix'=>'personal'], function(){
 
-        //Route::get('/', [PersonalController::class, 'indexc'])->name('personal.indexc');
         Route::get('/', [PersonalController::class, 'index'])->name('personal.index');
         Route::get('/create', [PersonalController::class, 'create']) -> name('personal.create');
         Route::post('/', [PersonalController::class, 'store'])->name('personal.store');
@@ -46,13 +45,6 @@ Route::middleware(['auth'])->group(function(){
 
     });
 
-    // Route::group(['prefix'=>'cliente'], function(){
-
-    //     Route::get('/', [ClienteController::class, 'percli'])->name('cliente.index');
-    //     Route::get('/', [ClienteController::class, 'sincli'])->name('cliente.index2');
-
-
-    // });
 
 
     Route::group(['prefix'=>'tipopersonal'], function(){

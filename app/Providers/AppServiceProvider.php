@@ -32,5 +32,13 @@ class AppServiceProvider extends ServiceProvider
             return $user->personal->tipo_personal->descripcion == 'Secretaria';
         });
 
+        Gate::define('chofer', function ($user) {
+            return $user->personal->tipo_personal->descripcion == 'Chofer';
+        });
+
+        Gate::define('cliente', function ($user) {
+            return $user->personal->tipo_personal->descripcion == 'Cliente';
+        });
+
     }
 }
