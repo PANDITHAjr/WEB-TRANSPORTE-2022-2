@@ -19,9 +19,6 @@ class CreateRutasTable extends Migration
             $table->string('destino');
             $table->string('tarifa');
             $table->timestamps();
-
-            $table->unsignedBigInteger('promocion_id');
-            $table->foreign('promocion_id')->references('id')->on('promociones');
         });
     }
 

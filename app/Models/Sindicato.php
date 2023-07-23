@@ -19,7 +19,4 @@ class Sindicato extends Model
         return $this->hasMany(Vehiculo::class,'id_sindicato');
     }
 
-    public function rutasindicato(){
-        return $this->hasMany(Rutasindicato::class,'id_sindicato');
-    }
 }
