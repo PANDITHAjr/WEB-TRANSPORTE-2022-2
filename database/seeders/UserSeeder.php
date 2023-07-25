@@ -65,6 +65,7 @@ class UserSeeder extends Seeder
         $personal->edad = '27';
         $personal->telefono = '74668051';
         $personal->direccion = 'camiri';
+        $personal->cat_lic = 'P';
         $personal->id_sindicato = '1';
         $personal->id_tipopersonal = '1';
         $personal->save();
@@ -105,7 +106,8 @@ class UserSeeder extends Seeder
         $personal->apellido = 'Ramos Carballo';
         $personal->edad = '22';
         $personal->telefono = '67671718';
-        $personal->direccion = 'camiri';
+        $personal->direccion = 'Camiri';
+        $personal->cat_lic = 'C';
         $personal->id_sindicato = '1';
         $personal->id_tipopersonal = '1';
         $personal->save();
@@ -146,6 +148,7 @@ class UserSeeder extends Seeder
         $personal->edad = '30';
         $personal->telefono = '78123288';
         $personal->direccion = 'Villa Monte';
+        $personal->cat_lic = 'C';
         $personal->id_sindicato = '3';
         $personal->id_tipopersonal = '3';
         $personal->save();
@@ -157,6 +160,7 @@ class UserSeeder extends Seeder
         $personal->edad = '34';
         $personal->telefono = '64738313';
         $personal->direccion = 'Camiri';
+        $personal->cat_lic = 'A';
         $personal->id_sindicato = '2';
         $personal->id_tipopersonal = '3';
         $personal->save();
