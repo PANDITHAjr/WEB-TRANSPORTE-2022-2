@@ -18,7 +18,7 @@ class UserSeeder extends Seeder
 {
     public function run()
     {
-        /////////usuario SANTIAGO
+        /////////TIPO PERSONAL
 
         $tipo_personal = new TipoPersonal();
         $tipo_personal->descripcion = 'Administrador';
@@ -37,15 +37,11 @@ class UserSeeder extends Seeder
         $tipo_personal->save();
 
 
-
-        $tipo_personal = new TipoPersonal();
-        $tipo_personal->descripcion = 'Chofer';
-        $tipo_personal->save();
+        /////////SINDICATOS
 
         $sindicato = new Sindicato();
         $sindicato->nombre = '27 de Diciembre';
         $sindicato->save();
-
 
         $sindicato = new Sindicato();
         $sindicato->nombre = 'Nuevo Horionte';
@@ -60,9 +56,7 @@ class UserSeeder extends Seeder
         $sindicato->save();
 
 
-
-
-        ////USUARIO BRAYAN
+        ////USUARIO WEIMAR
 
         $personal = new Personal();
         $personal->ci = '12345678';
@@ -82,7 +76,7 @@ class UserSeeder extends Seeder
         $user->id_personal = '1';
         $user->save();
 
-        ////USUARIO BRAYAN
+        ////USUARIO AYELEN
 
         $personal = new Personal();
         $personal->ci = '12345678';
@@ -124,7 +118,7 @@ class UserSeeder extends Seeder
         $user->save();
 
 
-        /////////// USUARIO Evans
+        /////////// USUARIO EVANS
 
         $personal = new Personal();
         $personal->ci = '12345678';
@@ -143,5 +137,55 @@ class UserSeeder extends Seeder
         $user->password = bcrypt('2000');
         $user->id_personal = '4';
         $user->save();
+
+        /////////// CHOFERES
+        $personal = new Personal();
+        $personal->ci = '67833511';
+        $personal->nombre = 'Marcos';
+        $personal->apellido = 'Barrera';
+        $personal->edad = '30';
+        $personal->telefono = '78123288';
+        $personal->direccion = 'Villa Monte';
+        $personal->id_sindicato = '3';
+        $personal->id_tipopersonal = '3';
+        $personal->save();
+
+        $personal = new Personal();
+        $personal->ci = '1125777';
+        $personal->nombre = 'Rodrigo';
+        $personal->apellido = 'Peña';
+        $personal->edad = '34';
+        $personal->telefono = '64738313';
+        $personal->direccion = 'Camiri';
+        $personal->id_sindicato = '2';
+        $personal->id_tipopersonal = '3';
+        $personal->save();
+
+        $user = new User();
+        $user->name = 'Rodrigo';
+        $user->email = 'rodrigo@gmail.com';
+        $user->password = bcrypt('1000');
+        $user->id_personal = '6';
+        $user->save();
+
+
+        /////////VEHICULOS
+        $vehiculo = new Vehiculo();
+        $vehiculo->linea = '1';
+        $vehiculo->placa = 'ABC123';
+        $vehiculo->marca = 'Toyota';
+        $vehiculo->modelo = 'Noah';
+        $vehiculo->id_personal = '5';
+        $vehiculo->id_sindicato = '3';
+        $vehiculo->save();
+
+        $vehiculo = new Vehiculo();
+        $vehiculo->linea = '23';
+        $vehiculo->placa = 'FTG123';
+        $vehiculo->marca = 'Thunderbird';
+        $vehiculo->modelo = 'LingT50';
+        $vehiculo->id_personal = '6';
+        $vehiculo->id_sindicato = '2';
+        $vehiculo->save();
     }
 }
