@@ -10,7 +10,7 @@
 
                 <div class="col s9 push-s3 center-align">
                     <a href="#user" class="centrado"><img class="circle responsive-img"
-                            src="https://linea4angol.cl/wp-content/uploads/2018/09/hombre.jpg"></a>
+                        <img class="card-img" src="{{ asset('images/perfil.png') }}">
                 </div>
             </div>
             <a href="#name"><span
@@ -34,8 +34,6 @@
     @endcan
 
     @can('secre')
-        <li><a class="waves-effect white-text" href="{{ route('tipopersonal.index') }}"> Tipo Personal<i
-                    class="material-icons">group</i></a></li>
         <li><a class="waves-effect white-text" href="{{ route('personal.index') }}"> Personal<i
                     class="material-icons">assignment_ind</i></a></li>
         <li><a class="waves-effect white-text" href="{{ route('sindicato.index') }}"> Sindicato<i

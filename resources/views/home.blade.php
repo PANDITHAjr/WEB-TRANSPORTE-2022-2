@@ -12,7 +12,7 @@
                     <div class="col s12 m4">
                         <div class="card">
                             <div class="card-image">
-                                <img class="card-img" src="{{ asset('images/ferrari.jpg') }}">
+                                <img class="card-img" src="{{ asset('images/logoizquierdo.png') }}">
                                 <span class="card-title">CARLOS</span>
                             </div>
                             <div class="card-action">
@@ -29,7 +29,7 @@
                         <div class="card">
                             <div class="card-image">
 
-                                <img class="card-img" src="{{ asset('images/toyo.png') }}">
+                                <img class="card-img" src="{{ asset('images/logomedio.png') }}">
                                 <span class="card-title">WEIMAR</span>
                             </div>
                             <div class="card-action">
@@ -45,7 +45,7 @@
                     <div class="col s12 m4">
                         <div class="card">
                             <div class="card-image">
-                                <img class="card-img" src="{{ asset('images/nisan.png') }}">
+                                <img class="card-img" src="{{ asset('images/logoderecho.png') }}">
                                 <span class="card-title">AYELEN</span>
                             </div>
                             <div class="card-action">
