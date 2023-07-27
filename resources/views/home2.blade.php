@@ -1,4 +1,4 @@
-@extends('layouts.app2')
+@extends('layouts.app')
 
 @section('content')
     <div class="container">
@@ -12,12 +12,12 @@
                     <div class="col s12 m4">
                         <div class="card">
                             <div class="card-image">
-                                <img class="card-img" src="{{ asset('images/ferrari.jpg') }}">
+                                <img class="card-img" src="{{ asset('images/logoizquierdo.png') }}">
                                 <span class="card-title">CARLOS</span>
                             </div>
                             <div class="card-action">
-                                <a href="{{ route('personal.index') }}", class="btn btn-floating red pulse"><i class="material-icons">confirmation_number</i></a>
-                                <a style="color:brown; font-size: 14px; font-family: Georgia;">PERSONAL</a>
+                                <a href="{{ route('sindicato.index') }}", class="btn btn-floating red pulse"><i class="material-icons">group</i></a>
+                                <a style="color:brown; font-size: 14px; font-family: Georgia;">SINDICATOS</a>
                             </div>
                         </div>
                     </div>
@@ -29,7 +29,7 @@
                         <div class="card">
                             <div class="card-image">
 
-                                <img class="card-img" src="{{ asset('images/toyo.png') }}">
+                                <img class="card-img" src="{{ asset('images/logomedio.png') }}">
                                 <span class="card-title">WEIMAR</span>
                             </div>
                             <div class="card-action">
@@ -45,12 +45,12 @@
                     <div class="col s12 m4">
                         <div class="card">
                             <div class="card-image">
-                                <img class="card-img" src="{{ asset('images/nisan.png') }}">
+                                <img class="card-img" src="{{ asset('images/logoderecho.png') }}">
                                 <span class="card-title">AYELEN</span>
                             </div>
                             <div class="card-action">
-                                <a href="{{ route('personal.index') }}", class="btn btn-floating green pulse"><i class="material-icons">airline_seat_recline_normal</i></a>
-                                <a style="color:brown; font-size: 14px; font-family: Georgia;"> PERSONAL</a>
+                                <a href="{{ route('vehiculo.index') }}", class="btn btn-floating green pulse"><i class="material-icons">airline_seat_recline_normal</i></a>
+                                <a style="color:brown; font-size: 14px; font-family: Georgia;"> VEHICULO</a>
                             </div>
                         </div>
                     </div>

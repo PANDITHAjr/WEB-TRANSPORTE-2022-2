@@ -3,9 +3,21 @@
 @section('content')
 
     <div class="row" style="margin-top: 5%">
-        <div class="col s4">
+        @can('admin')
+            <div class="col s4">
+                <a href="{{ route('sindicato.create') }}" class="waves-effect light-blue accent-4 btn"><i class="material-icons left">add</i>REGISTRAR</a>
+            </div>
+
+        @endcan
+        @can('secre')
+            <div class="col s4">
+                <a href="{{ route('sindicato.create') }}" class="waves-effect light-blue accent-4 btn"><i class="material-icons left">add</i>REGISTRAR</a>
+            </div>
+
+        @endcan
+        {{-- <div class="col s4">
             <a href="{{ route('sindicato.create') }}"  class="waves-effect light-blue accent-4 btn"><i class="material-icons left">add</i>REGISTRAR</a>
-        </div>
+        </div> --}}
         <div class="col s8">
             <h5>LISTA DE SINDICATOS</h5>
         </div>
@@ -16,7 +28,13 @@
                     <tr>
                         <th>ID</th>
                         <th>Descripcion</th>
-                        <th>Acciones</th>
+                        @can('admin')
+                            <th>Acciones</th>
+                        @endcan
+                        @can('secre')
+                            <th>Acciones</th>
+                        @endcan
+                        {{-- <th>Acciones</th> --}}
                     </tr>
                     </thead>
                     <tbody>
@@ -25,9 +43,20 @@
                                 <td>{{ $sindicato->id }}</td>
                                 <td>{{ $sindicato->nombre }}</td>
                                 <td>
-                                    <a href="{{ route('sindicato.show', [$sindicato->id]) }}"><span class="btn-floating black pulse"><i class="material-icons">visibility</i></a>
+                                    @can('admin')
+                                        <a href="{{ route('sindicato.show', [$sindicato->id]) }}"><span class="btn-floating black pulse"><i class="material-icons">visibility</i></a>
+                                        <a href="{{ route('sindicato.edit', [$sindicato->id]) }}"><span class="btn-floating amber accent-4 pulse"><i class="material-icons">create</i></a>
+                                        <a href="{{ route('sindicato.destroy', [$sindicato->id]) }}"><span class="btn-floating red accent-4 pulse"><i class="material-icons">delete_forever</i></a>
+                                    @endcan
+                                    @can('secre')
+                                        <a href="{{ route('sindicato.show', [$sindicato->id]) }}"><span class="btn-floating black pulse"><i class="material-icons">visibility</i></a>
+                                        <a href="{{ route('sindicato.edit', [$sindicato->id]) }}"><span class="btn-floating amber accent-4 pulse"><i class="material-icons">create</i></a>
+                                        <a href="{{ route('sindicato.destroy', [$sindicato->id]) }}"><span class="btn-floating red accent-4 pulse
+
+                                    @endcan
+                                    {{-- <a href="{{ route('sindicato.show', [$sindicato->id]) }}"><span class="btn-floating black pulse"><i class="material-icons">visibility</i></a>
                                     <a href="{{ route('sindicato.edit', [$sindicato->id]) }}"><span class="btn-floating amber accent-4 pulse"><i class="material-icons">create</i></a>
-                                    <a href="{{ route('sindicato.destroy', [$sindicato->id]) }}"><span class="btn-floating red accent-4 pulse"><i class="material-icons">delete_forever</i></a>
+                                    <a href="{{ route('sindicato.destroy', [$sindicato->id]) }}"><span class="btn-floating red accent-4 pulse"><i class="material-icons">delete_forever</i></a> --}}
                                 </td>
                             </tr>
                         @endforeach

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Vehiculo;
+use App\Models\Personal;
+use App\Models\Sindicato;
 use Illuminate\Http\Request;
 
 class VehiculoController extends Controller
@@ -18,7 +20,9 @@ class VehiculoController extends Controller
 
     public function create()
     {
-        return view('vehiculo.create');
+        $personal = Personal::all();
+        $sindicato = Sindicato::all();
+        return view('vehiculo.create', compact('sindicato'), compact('personal'));
     }
 
 
@@ -29,7 +33,6 @@ class VehiculoController extends Controller
         $vehiculo->placa = $request->input('placa');
         $vehiculo->marca = $request->input('marca');
         $vehiculo->modelo = $request->input('modelo');
-        $vehiculo->descripcion = $request->input('descripcion');
         $vehiculo->id_personal = $request->input('id_personal');
         $vehiculo->id_sindicato = $request->input('id_sindicato');
         $vehiculo->save();

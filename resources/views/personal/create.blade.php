@@ -85,7 +85,7 @@
 
                             <div class="input-field col s12 m6">
                                 <select name="id_sindicato">
-                                    <option selected disabled>Seleccione una opción:</option>
+                                    <option selected disabled>Seleccione un Tipo Personal:</option>
                                     @foreach($sindicato as $personal)
                                     <option value="{{ $personal->id }}">{{ $personal->nombre}}</option>
                                     @endforeach

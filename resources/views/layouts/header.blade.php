@@ -4,16 +4,16 @@
     </header>
 @endauth
 
-<nav class="navbar nav-extended no-padding teal darken-4">
+<nav class="navbar nav-extended no-padding teal grey darken-4">
     <div class="nav-wrapper">
         @auth
         @if (auth()->user()->personal->tipo_personal->descripcion == 'Cliente')
 
-        <a href="{{ route('home2') }}" class="brand-logo center hide-on-small-only">SINDICATO DE TRANSPORTE 27 DE DICIEMBRE</a>
+        <a style="color: #e57373;"	 href="{{ route('home2') }}" class="brand-logo center hide-on-small-only">SINDICATO DE TRANSPORTE 27 DE DICIEMBRE</a>
 
         @else
 
-        <a href="{{ route('home') }}" class="brand-logo center hide-on-small-only">SINDICATO DE TRANSPORTE 27 DE DICIEMBRE</a>
+        <a style="color: #e57373;"	 href="{{ route('home') }}" class="brand-logo center hide-on-small-only">SINDICATO DE TRANSPORTE 27 DE DICIEMBRE</a>
 
         @endif
         {{-- <a href="{{ route('home') }}" class="brand-logo center hide-on-small-only">SINDICATO DE TRANSPORTE 27 DE DICIEMBRE</a> --}}
