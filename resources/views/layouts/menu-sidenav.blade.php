@@ -62,7 +62,6 @@
         <li><a class="waves-effect white-text" href="{{ route('promocion.index') }}"> Promociones<i
                     class="material-icons">directions_bike</i></a></li>
     @endcan
-@endcan
 
 @can('cliente')
     <li><a class="waves-effect white-text" href="{{ route('sindicato.index') }}"> Sindicato<i
