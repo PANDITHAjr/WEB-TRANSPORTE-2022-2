@@ -31,6 +31,12 @@
                     class="material-icons">class</i></a></li>
         <li><a class="waves-effect white-text" href="{{ route('vehiculo.index') }}"> Vehiculo<i
                     class="material-icons">class</i></a></li>
+
+
+
+
+
+        
     @endcan
 
     @can('secre')

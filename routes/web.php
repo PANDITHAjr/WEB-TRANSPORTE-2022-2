@@ -6,6 +6,7 @@ use App\Http\Controllers\TipoPersonalController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\SindicatoController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PromocionController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -106,6 +107,37 @@ Route::middleware(['auth'])->group(function(){
         Route::get('/{id}/edit', [SindicatoController::class, 'edit'])->name('sindicato.edit');
         Route::put('/{id}', [SindicatoController::class, 'update'])->name('sindicato.update');
         Route::get('/{id}/destroy', [SindicatoController::class, 'destroy'])->name('sindicato.destroy');
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    Route::group(['prefix'=>'promocion'], function(){
+
+       Route::get('/', [PromocionController::class, 'index'])->name('promocion.index');
+       Route::get('/create', [PromocionController::class, 'create']) -> name('promocion.create');
+       Route::post('/', [PromocionController::class, 'store'])->name('promocion.store');
+       Route::get('/{id}', [PromocionController::class, 'show'])->name('promocion.show');
+       Route::get('/{id}/edit', [PromocionController::class, 'edit'])->name('promocion.edit');
+       Route::put('/{id}', [PromocionController::class, 'update'])->name('promocion.update');
+       Route::get('/{id}/destroy', [PromocionController::class, 'destroy'])->name('promocion.destroy');
 
     });
 

@@ -9,7 +9,7 @@ class PromocionController extends Controller
 {
     public function index()
     {
-        $promocions = Promocion::all();
+        $promociones = Promocion::all();
 
         return view('promocion.index', compact('promociones'));
     }
@@ -32,13 +32,13 @@ class PromocionController extends Controller
     public function show($id)
     {
         $promocion = Promocion::findOrFail($id);
-        return view('promocion.show', compact('promocion'));
+        return view('promocion.show', compact('promociones'));
     }
 
     public function edit($id)
     {
         $promocion = Promocion::findOrFail($id);
-        return view('promocion.edit', compact('promocion'));
+        return view('promocion.edit', compact('promociones'));
     }
 
     public function update(Request $request, $id)
