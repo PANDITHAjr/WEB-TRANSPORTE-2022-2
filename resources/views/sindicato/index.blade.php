@@ -51,8 +51,6 @@
                                     @can('secre')
                                         <a href="{{ route('sindicato.show', [$sindicato->id]) }}"><span class="btn-floating black pulse"><i class="material-icons">visibility</i></a>
                                         <a href="{{ route('sindicato.edit', [$sindicato->id]) }}"><span class="btn-floating amber accent-4 pulse"><i class="material-icons">create</i></a>
-                                        <a href="{{ route('sindicato.destroy', [$sindicato->id]) }}"><span class="btn-floating red accent-4 pulse
-
                                     @endcan
                                     {{-- <a href="{{ route('sindicato.show', [$sindicato->id]) }}"><span class="btn-floating black pulse"><i class="material-icons">visibility</i></a>
                                     <a href="{{ route('sindicato.edit', [$sindicato->id]) }}"><span class="btn-floating amber accent-4 pulse"><i class="material-icons">create</i></a>
