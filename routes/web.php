@@ -111,26 +111,6 @@ Route::middleware(['auth'])->group(function(){
 
     });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     Route::group(['prefix'=>'promocion'], function(){
 
        Route::get('/', [PromocionController::class, 'index'])->name('promocion.index');

@@ -31,17 +31,10 @@
                     class="material-icons">class</i></a></li>
         <li><a class="waves-effect white-text" href="{{ route('vehiculo.index') }}"> Vehiculo<i
                     class="material-icons">class</i></a></li>
-<<<<<<< HEAD
-
-
-
-
-
-        
-=======
         <li><a class="waves-effect white-text" href="{{ route('ruta.index') }}"> Ruta<i
                     class="material-icons">directions_bike</i></a></li>
->>>>>>> 5b14ee69c08f82f55246f029de1908b059835f3d
+        <li><a class="waves-effect white-text" href="{{ route('promocion.index') }}"> Promociones<i
+                    class="material-icons">directions_bike</i></a></li>
     @endcan
 
     @can('secre')
@@ -53,6 +46,8 @@
                     class="material-icons">class</i></a></li>
         <li><a class="waves-effect white-text" href="{{ route('ruta.index') }}"> Ruta<i
                     class="material-icons">directions_bike</i></a></li>
+        <li><a class="waves-effect white-text" href="{{ route('promocion.index') }}"> Promociones<i
+                    class="material-icons">directions_bike</i></a></li>
     @endcan
 
     @can('chofer')
@@ -60,21 +55,26 @@
                     class="material-icons">assignment_ind</i></a></li>
         <li><a class="waves-effect white-text" href="{{ route('sindicato.index') }}"> Sindicato<i
                     class="material-icons">class</i></a></li>
-        <li><a class="waves-effect white-text" href="{{ route('vehiculo.index') }}"> Vehiculo<i <li><a
-                        class="waves-effect white-text" href="{{ route('ruta.index') }}"> Ruta<i
-                            class="material-icons">directions_bike</i></a></li>
-        class="material-icons">class</i></a></li>
-    @endcan
-
-    @can('cliente')
-        <li><a class="waves-effect white-text" href="{{ route('sindicato.index') }}"> Sindicato<i
-                    class="material-icons">class</i></a></li>
         <li><a class="waves-effect white-text" href="{{ route('vehiculo.index') }}"> Vehiculo<i
                     class="material-icons">class</i></a></li>
         <li><a class="waves-effect white-text" href="{{ route('ruta.index') }}"> Ruta<i
                     class="material-icons">directions_bike</i></a></li>
-        <li><a class="waves-effect white-text" href="{{ route('personal.index') }}"> Personal<i
-                    class="material-icons">assignment_ind</i></a></li>
+        <li><a class="waves-effect white-text" href="{{ route('promocion.index') }}"> Promociones<i
+                    class="material-icons">directions_bike</i></a></li>
     @endcan
+@endcan
+
+@can('cliente')
+    <li><a class="waves-effect white-text" href="{{ route('sindicato.index') }}"> Sindicato<i
+                class="material-icons">class</i></a></li>
+    <li><a class="waves-effect white-text" href="{{ route('vehiculo.index') }}"> Vehiculo<i
+                class="material-icons">class</i></a></li>
+    <li><a class="waves-effect white-text" href="{{ route('ruta.index') }}"> Ruta<i
+                class="material-icons">directions_bike</i></a></li>
+    <li><a class="waves-effect white-text" href="{{ route('personal.index') }}"> Personal<i
+                class="material-icons">assignment_ind</i></a></li>
+    <li><a class="waves-effect white-text" href="{{ route('promocion.index') }}"> Promociones<i
+                class="material-icons">directions_bike</i></a></li>
+@endcan
 
 </ul>
