@@ -5,6 +5,7 @@ use App\Http\Controllers\PersonalController;
 use App\Http\Controllers\TipoPersonalController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\SindicatoController;
+use App\Http\Controllers\RutaController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -106,6 +107,18 @@ Route::middleware(['auth'])->group(function(){
         Route::get('/{id}/edit', [SindicatoController::class, 'edit'])->name('sindicato.edit');
         Route::put('/{id}', [SindicatoController::class, 'update'])->name('sindicato.update');
         Route::get('/{id}/destroy', [SindicatoController::class, 'destroy'])->name('sindicato.destroy');
+
+    });
+
+    Route::group(['prefix'=>'ruta'], function(){
+
+        Route::get('/', [RutaController::class, 'index'])->name('ruta.index');
+        Route::get('/create', [RutaController::class, 'create']) -> name('ruta.create');
+        Route::post('/', [RutaController::class, 'store'])->name('ruta.store');
+        Route::get('/{id}', [RutaController::class, 'show'])->name('ruta.show');
+        Route::get('/{id}/edit', [RutaController::class, 'edit'])->name('ruta.edit');
+        Route::put('/{id}', [RutaController::class, 'update'])->name('ruta.update');
+        Route::get('/{id}/destroy', [RutaController::class, 'destroy'])->name('ruta.destroy');
 
     });
 

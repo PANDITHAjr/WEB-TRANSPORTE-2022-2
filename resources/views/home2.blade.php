@@ -27,7 +27,7 @@
                             </div>
                             <div class="card-action">
                                 <a href="{{ route('personal.index') }}", class="btn btn-floating yellow pulse"><i
-                                        class="material-icons">airline_seat_recline_normal</i></a>
+                                        class="material-icons">contact_mail</i></a>
                                 <a style="color:brown; font-size: 14px; font-family: Georgia;">PERSONAL</a>
                             </div>
                         </div>
@@ -62,8 +62,8 @@
                                 {{-- <span class="card-title">CARLOS</span> --}}
                             </div>
                             <div class="card-action">
-                                <a href="{{ route('sindicato.index') }}", class="btn btn-floating red pulse"><i
-                                        class="material-icons">group</i></a>
+                                <a href="{{ route('ruta.index') }}", class="btn btn-floating red pulse"><i
+                                        class="material-icons">directions_bike</i></a>
                                 <a style="color:brown; font-size: 14px; font-family: Georgia;">RUTAS</a>
                             </div>
                         </div>
