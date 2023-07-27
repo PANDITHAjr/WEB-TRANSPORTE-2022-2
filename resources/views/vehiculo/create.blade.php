@@ -33,6 +33,7 @@
                             </div>
 
                             <div class="input-field col s12 m6">
+                                
                                 <input id="marca" type="text" class="validate" name="marca" value="{{old('marca')}}">
                                 <label for="marca">Marca:</label>
                                 @error('marca')

@@ -89,7 +89,7 @@
                                 {{-- <span class="card-title">CARLOS</span> --}}
                             </div>
                             <div class="card-action">
-                                <a href="{{ route('sindicato.index') }}", class="btn btn-floating green pulse"><i
+                                <a href="{{ route('promocion.index') }}", class="btn btn-floating green pulse"><i
                                         class="material-icons">airport_shuttle</i></a>
                                 <a style="color:brown; font-size: 14px; font-family: Georgia;">PROMOCIONES</a>
                             </div>
