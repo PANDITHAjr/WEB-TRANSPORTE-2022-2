@@ -5,6 +5,7 @@ use App\Http\Controllers\PersonalController;
 use App\Http\Controllers\TipoPersonalController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\SindicatoController;
+use App\Http\Controllers\RutaController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PromocionController;
 use Illuminate\Support\Facades\Auth;
@@ -129,6 +130,7 @@ Route::middleware(['auth'])->group(function(){
 
 
 
+
     Route::group(['prefix'=>'promocion'], function(){
 
        Route::get('/', [PromocionController::class, 'index'])->name('promocion.index');
@@ -138,6 +140,21 @@ Route::middleware(['auth'])->group(function(){
        Route::get('/{id}/edit', [PromocionController::class, 'edit'])->name('promocion.edit');
        Route::put('/{id}', [PromocionController::class, 'update'])->name('promocion.update');
        Route::get('/{id}/destroy', [PromocionController::class, 'destroy'])->name('promocion.destroy');
+
+    });
+
+
+
+    Route::group(['prefix'=>'ruta'], function(){
+
+        Route::get('/', [RutaController::class, 'index'])->name('ruta.index');
+        Route::get('/create', [RutaController::class, 'create']) -> name('ruta.create');
+        Route::post('/', [RutaController::class, 'store'])->name('ruta.store');
+        Route::get('/{id}', [RutaController::class, 'show'])->name('ruta.show');
+        Route::get('/{id}/edit', [RutaController::class, 'edit'])->name('ruta.edit');
+        Route::put('/{id}', [RutaController::class, 'update'])->name('ruta.update');
+        Route::get('/{id}/destroy', [RutaController::class, 'destroy'])->name('ruta.destroy');
+
 
     });
 

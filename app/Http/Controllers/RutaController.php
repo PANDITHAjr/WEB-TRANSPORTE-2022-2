@@ -44,8 +44,9 @@ class RutaController extends Controller
     public function update(Request $request, $id)
     {
         $ruta = Ruta::findOrFail($id);
-        $ruta->nombre = $request->input('nombre');
-        $ruta->descripcion = $request->input('descripcion');
+        $ruta->origen = $request->input('origen');
+        $ruta->destino = $request->input('destino');
+        $ruta->tarifa = $request->input('tarifa');
         $ruta->save();
 
         return redirect()->route('ruta.index');
