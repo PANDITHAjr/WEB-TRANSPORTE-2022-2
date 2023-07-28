@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\VehiculoController;
+use App\Http\Controllers\MantenimientoController;
 use App\Http\Controllers\ConductorController;
 use App\Http\Controllers\PersonalController;
 use App\Http\Controllers\TipoPersonalController;
@@ -123,8 +124,6 @@ Route::middleware(['auth'])->group(function(){
 
     });
 
-
-
     Route::group(['prefix'=>'ruta'], function(){
 
         Route::get('/', [RutaController::class, 'index'])->name('ruta.index');
@@ -135,6 +134,17 @@ Route::middleware(['auth'])->group(function(){
         Route::put('/{id}', [RutaController::class, 'update'])->name('ruta.update');
         Route::get('/{id}/destroy', [RutaController::class, 'destroy'])->name('ruta.destroy');
 
+    });
+
+    Route::group(['prefix'=>'mantenimiento'], function(){
+
+        Route::get('/', [MantenimientoController::class, 'index'])->name('mantenimiento.index');
+        Route::get('/create', [MantenimientoController::class, 'create']) -> name('mantenimiento.create');
+        Route::post('/', [MantenimientoController::class, 'store'])->name('mantenimiento.store');
+        Route::get('/{id}', [MantenimientoController::class, 'show'])->name('mantenimiento.show');
+        Route::get('/{id}/edit', [MantenimientoController::class, 'edit'])->name('mantenimiento.edit');
+        Route::put('/{id}', [MantenimientoController::class, 'update'])->name('mantenimiento.update');
+        Route::get('/{id}/destroy', [MantenimientoController::class, 'destroy'])->name('mantenimiento.destroy');
 
     });
 
