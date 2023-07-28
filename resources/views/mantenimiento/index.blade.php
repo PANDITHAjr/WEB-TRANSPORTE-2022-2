@@ -2,12 +2,6 @@
 
 @section('content')
     <div class="row" style="margin-top: 5%">
-
-        <div class="col s4">
-            <a href="{{ route('mantenimiento.create') }}" class="waves-effect light-blue accent-4 btn"><i
-                    class="material-icons left">add</i>REGISTRAR</a>
-        </div>
-
         @can('admin')
             <div class="col s4">
                 <a href="{{ route('ruta.create') }}" class="waves-effect light-blue accent-4 btn"><i
@@ -71,15 +65,6 @@
                                                 class="btn-floating amber accent-4 pulse"><i
                                                     class="material-icons">create</i></a>
                                     @endcan
-
-                                    <a href="{{ route('mantenimiento.show', [$mantenimiento->id]) }}"><span
-                                        class="btn-floating black pulse"><i class="material-icons">visibility</i></a>
-                                <a href="{{ route('mantenimiento.edit', [$mantenimiento->id]) }}"><span
-                                        class="btn-floating amber accent-4 pulse"><i
-                                            class="material-icons">create</i></a>
-                                <a href="{{ route('mantenimiento.destroy', [$mantenimiento->id]) }}"><span
-                                        class="btn-floating red accent-4 pulse"><i
-                                            class="material-icons">delete_forever</i></a>
                                 </td>
                             </tr>
                         @endforeach
