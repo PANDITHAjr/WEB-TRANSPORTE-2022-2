@@ -17,9 +17,12 @@ class MantenimientoController extends Controller
         $refrescar = $request->input('refrescar');
 
         $mantenimientos = Mantenimiento::query();
+        $vehiculo = Vehiculo::query();
         if($buscar){
             $mantenimientos->where('descripcion', 'like', "%$buscar%")
-            ->orWhere('fecha','like',"%$buscar%");
+               ->orWhereHas('vehiculo', function ($query) use ($buscar) {
+                    $query->where('placa', 'like', "%$buscar%");
+               });
         }
         $mantenimientos = $mantenimientos->get();
 
