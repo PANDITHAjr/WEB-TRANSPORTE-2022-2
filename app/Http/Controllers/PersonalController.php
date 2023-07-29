@@ -9,9 +9,25 @@ use Illuminate\Http\Request;
 
 class PersonalController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $personales = Personal::all();
+        // $personales = Personal::all();
+        // return view('personal.index', compact('personales'));
+
+        $buscar = $request->input('buscar');
+        $refrescar = $request->input('refrescar');
+
+        $personales = Personal::query();
+        if($buscar){
+            $personales->where('nombre', 'like', "%$buscar%")
+            ->orWhere('ci','like',"%$buscar%");
+        }
+        $personales = $personales->get();
+
+        if($refrescar){
+            $personales = Personal::all();
+        }
+
         return view('personal.index', compact('personales'));
     }
 

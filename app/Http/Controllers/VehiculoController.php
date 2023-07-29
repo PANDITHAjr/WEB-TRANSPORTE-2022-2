@@ -10,9 +10,25 @@ use Illuminate\Http\Request;
 class VehiculoController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
-        $vehiculos = vehiculo::all();
+        // $vehiculos = Vehiculo::all();
+        // return view('vehiculo.index', compact('vehiculos'));
+
+        $buscar = $request->input('buscar');
+        $refrescar = $request->input('refrescar');
+
+        $vehiculos = Vehiculo::query();
+        if($buscar){
+            $vehiculos->where('placa', 'like', "%$buscar%")
+            ->orWhere('modelo','like',"%$buscar%");
+        }
+        $vehiculos = $vehiculos->get();
+
+        if($refrescar){
+            $vehiculos = Vehiculo::all();
+        }
+
         return view('vehiculo.index', compact('vehiculos'));
 
     }

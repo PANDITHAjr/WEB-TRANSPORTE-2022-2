@@ -7,9 +7,24 @@ use Illuminate\Http\Request;
 
 class PromocionController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $promociones = Promocion::all();
+        // $promociones = Promocion::all();
+        // return view('promocion.index', compact('promociones'));
+
+        $buscar = $request->input('buscar');
+        $refrescar = $request->input('refrescar');
+
+        $promociones = Promocion::query();
+        if($buscar){
+            $promociones->where('nombre', 'like', "%$buscar%")
+            ->orWhere('descripcion','like',"%$buscar%");
+        }
+        $promociones = $promociones->get();
+
+        if($refrescar){
+            $promociones = Promocion::all();
+        }
 
         return view('promocion.index', compact('promociones'));
     }

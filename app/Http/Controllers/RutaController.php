@@ -7,9 +7,25 @@ use Illuminate\Http\Request;
 
 class RutaController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $rutas = Ruta::all();
+        // $rutas = Ruta::all();
+        // return view('ruta.index', compact('rutas'));
+
+        $buscar = $request->input('buscar');
+        $refrescar = $request->input('refrescar');
+
+        $rutas = Ruta::query();
+        if($buscar){
+            $rutas->where('origen', 'like', "%$buscar%")
+            ->orWhere('destino','like',"%$buscar%");
+        }
+        $rutas = $rutas->get();
+
+        if($refrescar){
+            $rutas = Ruta::all();
+        }
+
         return view('ruta.index', compact('rutas'));
     }
 

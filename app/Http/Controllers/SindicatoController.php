@@ -7,9 +7,23 @@ use Illuminate\Http\Request;
 
 class SindicatoController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $sindicatos = Sindicato::all();
+        // $sindicatos = Sindicato::all();
+        // return view('sindicato.index', compact('sindicatos'));
+
+        $buscar = $request->input('buscar');
+        $refrescar = $request->input('refrescar');
+
+        $sindicatos = Sindicato::query();
+        if($buscar){
+            $sindicatos->where('nombre', 'like', "%$buscar%");
+        }
+        $sindicatos = $sindicatos->get();
+
+        if($refrescar){
+            $sindicatos = Sindicato::all();
+        }
 
         return view('sindicato.index', compact('sindicatos'));
     }

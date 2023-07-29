@@ -8,9 +8,25 @@ use Illuminate\Http\Request;
 
 class MantenimientoController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $mantenimientos = Mantenimiento::all();
+        // $mantenimientos = Mantenimiento::all();
+        // return view('mantenimiento.index', compact('mantenimientos'));
+
+        $buscar = $request->input('buscar');
+        $refrescar = $request->input('refrescar');
+
+        $mantenimientos = Mantenimiento::query();
+        if($buscar){
+            $mantenimientos->where('descripcion', 'like', "%$buscar%")
+            ->orWhere('fecha','like',"%$buscar%");
+        }
+        $mantenimientos = $mantenimientos->get();
+
+        if($refrescar){
+            $mantenimientos = Mantenimiento::all();
+        }
+
         return view('mantenimiento.index', compact('mantenimientos'));
     }
 

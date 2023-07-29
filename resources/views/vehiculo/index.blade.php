@@ -13,6 +13,20 @@
                         class="material-icons left">add</i>REGISTRAR</a>
             </div>
         @endcan
+
+        <div class="right-align">
+            <a href="{{ route('vehiculo.index') }}" class="waves-effect light-blue accent-4 btn"><i
+                    class="material-icons left">add</i>Refrescar</a>
+        </div>
+        <br>
+
+        <form action="{{ route('vehiculo.index') }}" method="GET">
+            <div style="text-align: center;" class="relative">
+                <input type="search" name="buscar" id="default-search"
+                    class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-2xl bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Buscar placa o modelo del vehiculo" required>
+                <button style="margin: 0 auto;" type="submit" class="waves-effect light-blue accent-4 btn">Buscar</button>
+            </div>
         <div class="col s8">
             <h5>LISTA DE VEHICULOS</h5>
         </div>

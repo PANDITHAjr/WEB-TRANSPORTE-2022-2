@@ -15,10 +15,26 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $usuarios = User::all();
-        return view('usuario.index',compact('usuarios'));
+        // $usuarios = User::all();
+        // return view('usuario.index',compact('usuarios'));
+
+        $buscar = $request->input('buscar');
+        $refrescar = $request->input('refrescar');
+
+        $usuarios = User::query();
+        if($buscar){
+            $usuarios->where('nombre', 'like', "%$buscar%")
+            ->orWhere('ci','like',"%$buscar%");
+        }
+        $usuarios = $usuarios->get();
+
+        if($refrescar){
+            $usuarios = User::all();
+        }
+
+        return view('usuario.index', compact('usuarios'));
     }
     public function create()
     {

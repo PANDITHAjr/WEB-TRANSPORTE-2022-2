@@ -13,9 +13,9 @@
                             src="{{ asset('images/perfil.png') }}">
                 </div>
             </div>
-            <a href="#name"><span
+            <a href="{{ route('personal.show', [auth()->user()->id]) }}"><span
                     class="black-text name">{{ auth()->user()->personal->nombre . ' ' . auth()->user()->personal->apellido }}</span></a>
-            <a href="#email"><span
+            <a href="{{ route('usuario.show', [auth()->user()->id]) }}"><span
                     class="black-text email">{{ auth()->user()->personal->tipo_personal->descripcion }}</span></a>
         </div>
     </li>

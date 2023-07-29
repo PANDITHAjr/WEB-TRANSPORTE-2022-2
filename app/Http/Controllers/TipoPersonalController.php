@@ -8,9 +8,23 @@ use Illuminate\Http\Request;
 class TipoPersonalController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
-        $tipopersonales = TipoPersonal::all();
+        // $tipopersonales = TipoPersonal::all();
+        // return view('tipopersonal.index', compact('tipopersonales'));
+
+        $buscar = $request->input('buscar');
+        $refrescar = $request->input('refrescar');
+
+        $tipopersonales = TipoPersonal::query();
+        if($buscar){
+            $tipopersonales->where('descripcion', 'like', "%$buscar%");
+        }
+        $tipopersonales = $tipopersonales->get();
+
+        if($refrescar){
+            $tipopersonales = TipoPersonal::all();
+        }
 
         return view('tipopersonal.index', compact('tipopersonales'));
     }

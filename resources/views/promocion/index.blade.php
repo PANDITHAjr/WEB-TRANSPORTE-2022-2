@@ -13,9 +13,20 @@
                         class="material-icons left">add</i>REGISTRAR</a>
             </div>
         @endcan
-        {{-- <div class="col s4">
-            <a href="{{ route('promocion.create') }}"  class="waves-effect light-blue accent-4 btn"><i class="material-icons left">add</i>REGISTRAR</a>
-        </div> --}}
+
+        <div class="right-align">
+            <a href="{{ route('promocion.index') }}" class="waves-effect light-blue accent-4 btn"><i
+                    class="material-icons left">add</i>Refrescar</a>
+        </div>
+        <br>
+
+        <form action="{{ route('promocion.index') }}" method="GET">
+            <div style="text-align: center;" class="relative">
+                <input type="search" name="buscar" id="default-search"
+                    class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-2xl bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Buscar nombre o descripcion de la promocion" required>
+                <button style="margin: 0 auto;" type="submit" class="waves-effect light-blue accent-4 btn">Buscar</button>
+            </div>
         <div class="col s8">
             <h5>LISTA DE PROMOCIONES</h5>
         </div>
@@ -27,7 +38,7 @@
                             <th>ID</th>
                             <th>Nombre</th>
                             <th>Descripcion</th>
-                            
+
                             @can('admin')
                                 <th>Acciones</th>
                             @endcan
@@ -42,7 +53,7 @@
                                 <td>{{ $promocion->id }}</td>
                                 <td>{{ $promocion->nombre }}</td>
                                 <td>{{ $promocion->descripcion }}</td>
-                              
+
                                 <td>
                                     {{-- <a href="{{ route('promocion.show', [$promocion->id]) }}"><span class="new badge teal" data-badge-caption="ver"></span></a>  --}}
                                     {{-- <a href="{{ route('promocion.edit', [$promocion->id]) }}"><span class="new badge amber accent-4" data-badge-caption="editar"></span></a> --}}
