@@ -22,7 +22,7 @@
 
     <li><a style="text-align: center;" class="subheader yellow-text">🚗 MENU 🚗</a></li>
     @can('admin')
-        <li><a class="waves-effect white-text" href="{{ route('usuario.index') }}"> Usuario<i
+        <li><a class="waves-effect white-text" href="{{ route('usuario.index') }}"> Usuario<i style="color: red"
                     class="material-icons dp48">account_circle</i></a></li>
         <li><a class="waves-effect white-text" href="{{ route('tipopersonal.index') }}"> Tipo Personal<i style="color: blue"
                     class="material-icons">group</i></a></li>
