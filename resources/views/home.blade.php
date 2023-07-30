@@ -12,7 +12,7 @@
                                 {{-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp8Jxw998h79i4ujAGtowKQrfnDXv0YdetT4k2YI0Tv42UUPmOczJJWVuikNma6Jzu65I&usqp=CAU"> --}}
                                 {{-- <span style="color:blue" class="card-title">FICH</span> --}}
                                 <img class="card-img" src="{{ asset('images/baner.png') }}"
-                                    style="width: 815px; height: 115px">
+                                    style="width: 800px; height: 145px">
                             </div>
                         </div>
                     </div>
