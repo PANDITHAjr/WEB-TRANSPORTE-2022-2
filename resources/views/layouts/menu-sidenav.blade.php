@@ -21,7 +21,7 @@
     </li>
     <li><a class="subheader yellow-text">🚗 MENU 🚗</a></li>
     @can('admin')
-        <li><a class="waves-effect white-text" href="{{ route('usuario.index') }}"> Usuario<i 
+        <li><a class="waves-effect white-text" href="{{ route('usuario.index') }}"> Usuario<i
                     class="material-icons dp48">account_circle</i></a></li>
         <li><a class="waves-effect white-text" href="{{ route('tipopersonal.index') }}"> Tipo Personal<i
                     class="material-icons">group</i></a></li>
@@ -33,7 +33,7 @@
                     class="material-icons">directions_car</i></a></li>
         <li><a class="waves-effect white-text" href="{{ route('ruta.index') }}"> Ruta<i
                     class="material-icons">directions_bike</i></a></li>
-        <li><a class="waves-effect white-text" href="{{ route('promocion.index') }}"> Promociones<i 
+        <li><a class="waves-effect white-text" href="{{ route('promocion.index') }}"> Promociones<i
                     class="material-icons dp48">card_giftcard</i>
         <li><a class="waves-effect white-text" href="{{ route('mantenimiento.index') }}"> Mantenimiento<i
                     class="material-icons">build</i></a></li>
@@ -48,7 +48,7 @@
                     class="material-icons">directions_car</i></a></li>
         <li><a class="waves-effect white-text" href="{{ route('ruta.index') }}"> Ruta<i
                     class="material-icons">directions_bike</i></a></li>
-        <li><a class="waves-effect white-text" href="{{ route('promocion.index') }}"> Promociones<i 
+        <li><a class="waves-effect white-text" href="{{ route('promocion.index') }}"> Promociones<i
                     class="material-icons dp48">card_giftcard</i>
         <li><a class="waves-effect white-text" href="{{ route('mantenimiento.index') }}"> Mantenimiento<i
                     class="material-icons">build</i></a></li>
@@ -63,8 +63,8 @@
                     class="material-icons">directions_car</i></a></li>
         <li><a class="waves-effect white-text" href="{{ route('ruta.index') }}"> Ruta<i
                     class="material-icons">directions_bike</i></a></li>
-        <li><a class="waves-effect white-text" href="{{ route('promocion.index') }}"> Promociones<i 
-               class="material-icons dp48">card_giftcard</i>
+        <li><a class="waves-effect white-text" href="{{ route('promocion.index') }}"> Promociones<i
+                    class="material-icons dp48">card_giftcard</i>
         <li><a class="waves-effect white-text" href="{{ route('mantenimiento.index') }}"> Mantenimiento<i
                     class="material-icons">build</i></a></li>
     @endcan
@@ -78,8 +78,8 @@
                     class="material-icons">directions_bike</i></a></li>
         <li><a class="waves-effect white-text" href="{{ route('personal.index') }}"> Personal<i
                     class="material-icons">assignment_ind</i></a></li>
-        <li><a class="waves-effect white-text" href="{{ route('promocion.index') }}"> Promociones<i 
-               class="material-icons dp48">card_giftcard</i>
+        <li><a class="waves-effect white-text" href="{{ route('promocion.index') }}"> Promociones<i
+                    class="material-icons dp48">card_giftcard</i>
         <li><a class="waves-effect white-text" href="{{ route('mantenimiento.index') }}"> Mantenimiento<i
                     class="material-icons">build</i></a></li>
     @endcan
