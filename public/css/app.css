@@ -54,3 +54,23 @@ body.dark-mode {
   background-color: #333;
   color: #fff;
 }
+
+/* Estilos generales para el modo claro */
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+/* Otros estilos para el modo oscuro */
+.dark-mode .card {
+  background-color: #444444;
+  color: #ffffff;
+}
+
+/* ... y así sucesivamente para otros elementos que deben cambiar en el modo oscuro */

@@ -34,13 +34,9 @@
                     class="material-icons">directions_car</i></a></li>
         <li><a class="waves-effect white-text" href="{{ route('ruta.index') }}"> Ruta<i style="color: blue"
                     class="material-icons">directions_bike</i></a></li>
-<<<<<<< HEAD
         <li><a class="waves-effect white-text" href="{{ route('promocion.index') }}"> Promociones<i style="color: red"
-=======
-        <li><a class="waves-effect white-text" href="{{ route('promocion.index') }}"> Promociones<i
->>>>>>> 249b649261ef4f170c90b5559604deded58522cb
                     class="material-icons dp48">card_giftcard</i>
-        <li><a class="waves-effect white-text" href="{{ route('mantenimiento.index') }}"> Mantenimiento<i
+        <li><a class="waves-effect white-text" href="{{ route('mantenimiento.index') }}"> Mantenimiento<i style="color: blue"
                     style="color: blue" class="material-icons">build</i></a></li>
     @endcan
 

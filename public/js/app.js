@@ -7,24 +7,26 @@
   \*****************************/
 /***/ (() => {
 
-// resources/js/app.js
-
-// ... (tu código actual)
-
 document.addEventListener('DOMContentLoaded', function () {
   var modeToggleButton = document.getElementById('mode-toggle');
   var body = document.body;
 
-  // Verificar si hay un valor almacenado para el modo
-  var savedMode = localStorage.getItem('darkMode');
-  if (savedMode) {
-    body.classList.toggle('dark-mode', savedMode === 'true');
+  // Verificar si el modo oscuro está activo en el almacenamiento local
+  var isDarkModeActive = localStorage.getItem('darkModeActive') === 'true';
+
+  // Establecer el modo oscuro según el estado almacenado
+  if (isDarkModeActive) {
+    body.classList.add('dark-mode');
+  } else {
+    body.classList.remove('dark-mode');
   }
   modeToggleButton.addEventListener('click', function () {
-    // Cambiar el estado del modo
-    var darkMode = body.classList.toggle('dark-mode');
-    // Guardar el estado del modo en el almacenamiento local
-    localStorage.setItem('darkMode', darkMode);
+    // Cambiar el modo oscuro
+    body.classList.toggle('dark-mode');
+
+    // Guardar el estado del modo oscuro en el almacenamiento local
+    var isDarkModeActive = body.classList.contains('dark-mode');
+    localStorage.setItem('darkModeActive', isDarkModeActive.toString());
   });
 });
 
