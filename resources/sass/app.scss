@@ -1,4 +1,4 @@
-/* Ejemplo de app.css */
+/* resources/sass/app.scss */
 
 /* Estilos generales */
 body {
@@ -14,15 +14,15 @@ body {
     margin-bottom: 1rem;
   }
 
-  /* Estilos para botones */
-  .button {
-    display: inline-block;
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-  }
+/* Estilos para botones */
+   .button {
+     display: inline-block;
+     background-color: #007bff;
+     color: #fff;
+     padding: 10px 20px;
+     border-radius: 5px;
+     text-decoration: none;
+   }
 
   .button:hover {
     background-color: #0056b3;
@@ -36,4 +36,10 @@ body {
 
   a:hover {
     text-decoration: underline;
+  }
+
+  /* Estilos para el modo oscuro */
+  body.dark-mode {
+    background-color: #333;
+    color: #fff;
   }
