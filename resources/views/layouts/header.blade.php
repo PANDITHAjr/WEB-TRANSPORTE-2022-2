@@ -36,13 +36,13 @@
                 </li>
 
                 <li>
-                    <a style="color: blue" href="{{ route('personal.show', [auth()->user()->id]) }}" role="button">
+                    <a href="{{ route('personal.show', [auth()->user()->id]) }}" role="button">
                         {{ Auth::user()->name }}
                     </a>
                 </li>
             </ul>
 
-            <a style="color: red" href="#!" data-target="sidenav-left"
+            <a href="#!" data-target="sidenav-left"
                 class="sidenav-trigger left show-on-medium-and-up"><i
                     class="material-icons dark-primary-color-icon">menu</i></a>
 

@@ -78,11 +78,11 @@
                                                         class="material-icons">create</i></a>
                                         @endcan
                                         @can('chofer')
-                                        <a href="{{ route('promocion.show', [$mantenimiento->id]) }}"><span
+                                        <a href="{{ route('promocion.show', [$promocion->id]) }}"><span
                                                 class="btn-floating black pulse"><i class="material-icons">visibility</i></a>
                                     @endcan
                                     @can('cliente')
-                                        <a href="{{ route('promocion.show', [$mantenimiento->id]) }}"><span
+                                        <a href="{{ route('promocion.show', [$promocion->id]) }}"><span
                                                 class="btn-floating black pulse"><i class="material-icons">visibility</i></a>
                                     @endcan
                                 </tr>

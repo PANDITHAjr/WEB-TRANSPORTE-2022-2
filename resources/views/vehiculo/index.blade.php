@@ -83,11 +83,11 @@
                                                     class="material-icons">create</i></a>
                                     @endcan
                                     @can('chofer')
-                                        <a href="{{ route('vehiculo.show', [$mantenimiento->id]) }}"><span
+                                        <a href="{{ route('vehiculo.show', [$vehiculo->id]) }}"><span
                                                 class="btn-floating black pulse"><i class="material-icons">visibility</i></a>
                                     @endcan
                                     @can('cliente')
-                                        <a href="{{ route('vehiculo.show', [$mantenimiento->id]) }}"><span
+                                        <a href="{{ route('vehiculo.show', [$vehiculo->id]) }}"><span
                                                 class="btn-floating black pulse"><i class="material-icons">visibility</i></a>
                                     @endcan
                                 </td>
