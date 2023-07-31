@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="estilos.css">
+ <!-- Aquí puedes incluir el menú de navegación si lo deseas -->
+              <!--Implementación Patrón de Navegación por Pestañas (Tabs) -->
+              <div class="tabs">
+                <button class="tab-button" onclick="redirectToHome()">Home</button>
+                <button class="tab-button active" onclick="redirectToCrearcuenta()">Crear cuenta</button>
+                <button class="tab-button" onclick="redirectToContactanos()">Contactanos</button>
+                <button class="tab-button" onclick=" redirectToEaliadas()">Empresas Aliadas</button>
+             
+                
+            
+              </div>
+        
+              <script>
+                    function redirectToHome(){ 
+                    window.location.href = "index.html"; }
+
+
+                    function redirectToContactanos() {
+                        window.location.href = "contactanos.html"; // Reemplaza 'contact-form' con el ID de la sección de 'Contáctanos'
+                            
+                    }
+                    function redirectToCrearcuenta(){ 
+                    window.location.href = "crearcuenta.html"; }
+
+                    function redirectToEaliadas(){ 
+                    window.location.href = "empresas_aliadas.html"; }
+
+                    function changeTab(evt, tabName) {
+
+                }
+            </script>
+           
+          
+            <!-- script para PatrónUI de Navegación por Pestañas (Tabs) -->
+        
+            <script>
+              function changeTab(evt, tabName) {
+                const tabContents = document.getElementsByClassName("tab-content");
+                for (let i = 0; i < tabContents.length; i++) {
+                  tabContents[i].classList.remove("active");
+                }
+        
+                const tabButtons = document.getElementsByClassName("tab-button");
+                for (let i = 0; i < tabButtons.length; i++) {
+                  tabButtons[i].classList.remove("active");
+                }
+        
+                document.getElementById(tabName).classList.add("active");
+                evt.currentTarget.classList.add("active");
+              }
+            </script>
+
+    
+
+<main>
+    <div class="contact-section">
+        <h1>Contáctanos</h1>
+        <p>Si tienes alguna pregunta o inquietud, no dudes en ponerte en contacto con nosotros. Estamos aquí para ayudarte.</p>
+        <form class="contact-form" action="#" method="POST">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+    </div>
+</main>

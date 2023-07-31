@@ -7,6 +7,7 @@
   </head>
 
   <body>    
+    
       <header class="header">
 
         <!-- Implementación Patrón de Navegación por Menú Desplegable (Dropdown Menu) -->
@@ -28,12 +29,29 @@
 
         <!--Implementación Patrón de Navegación por Pestañas (Tabs) -->
         <div class="tabs">
-        <button class="tab-button active" onclick="changeTab(event, 'tab1')">Crear cuenta</button>
-        <button class="tab-button" onclick="changeTab(event, 'tab2')">Contactanos</button>
-        <button class="tab-button" onclick="changeTab(event, 'tab2')">Empresas Aliadas</button>
-        <button class="tab-button" onclick="changeTab(event, 'tab3')">Conoce mas de nosotros</button>
+        <button class="tab-button active" onclick="redirectToCrearcuenta()">Crear cuenta</button>
+        <button class="tab-button" onclick="redirectToContactanos()">Contactanos</button>
+        <button class="tab-button" onclick=" redirectToEaliadas()">Empresas Aliadas</button>
+     
     
       </div>
+
+      <script>
+        function redirectToContactanos() {
+            window.location.href = "contactanos.html"; // Reemplaza 'contact-form' con el ID de la sección de 'Contáctanos'
+                 
+          }
+        function redirectToCrearcuenta(){ 
+      window.location.href = "crearcuenta.html"; }
+  
+      function redirectToEaliadas(){ 
+      window.location.href = "empresas_aliadas.html"; }
+    
+        function changeTab(evt, tabName) {
+
+        }
+    </script>
+    
 
       </header>
   

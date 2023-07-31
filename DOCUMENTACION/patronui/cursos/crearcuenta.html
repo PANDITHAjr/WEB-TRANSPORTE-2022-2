@@ -1,0 +1,87 @@
+<link rel="stylesheet" href="tu_archivo_css.css">
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta Nueva</title>
+    <link rel="stylesheet" href="estilos.css">
+
+
+ <!-- Aquí puedes incluir el menú de navegación si lo deseas -->
+              <!--Implementación Patrón de Navegación por Pestañas (Tabs) -->
+              <div class="tabs">
+                <button class="tab-button" onclick="redirectToHome()">Home</button>
+                <button class="tab-button active" onclick="redirectToCrearcuenta()">Crear cuenta</button>
+                <button class="tab-button" onclick="redirectToContactanos()">Contactanos</button>
+                <button class="tab-button" onclick=" redirectToEaliadas()">Empresas Aliadas</button>
+               
+                
+            
+              </div>
+        
+              <script>
+                    function redirectToHome(){ 
+                    window.location.href = "index.html"; }
+
+
+                    function redirectToContactanos() {
+                        window.location.href = "contactanos.html"; // Reemplaza 'contact-form' con el ID de la sección de 'Contáctanos'
+                            
+                    }
+                    function redirectToCrearcuenta(){ 
+                    window.location.href = "crearcuenta.html"; }
+
+                    function redirectToEaliadas(){ 
+                    window.location.href = "empresas_aliadas.html"; }
+
+                    function changeTab(evt, tabName) {
+
+                }
+            </script>
+           
+          
+            <!-- script para PatrónUI de Navegación por Pestañas (Tabs) -->
+        
+            <script>
+              function changeTab(evt, tabName) {
+                const tabContents = document.getElementsByClassName("tab-content");
+                for (let i = 0; i < tabContents.length; i++) {
+                  tabContents[i].classList.remove("active");
+                }
+        
+                const tabButtons = document.getElementsByClassName("tab-button");
+                for (let i = 0; i < tabButtons.length; i++) {
+                  tabButtons[i].classList.remove("active");
+                }
+        
+                document.getElementById(tabName).classList.add("active");
+                evt.currentTarget.classList.add("active");
+              }
+            </script>
+
+    
+</head>
+<body>
+    <div class="signup-section">
+        <h1>Crear Cuenta Nueva</h1>
+        <form class="signup-form">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input class="input" type="email" id="email" name="email" required>
+
+            <label for="password">Contraseña:</label>
+            <input class="input" type="password" id="password" name="password" required>
+
+            <label for="confirm-password">Confirmar Contraseña:</label>
+            <input class="input" type="password" id="confirm-password" name="confirm-password" required>
+
+            <button type="submit">Crear Cuenta</button>
+        </form>
+    </div>
+</body>
+</html>

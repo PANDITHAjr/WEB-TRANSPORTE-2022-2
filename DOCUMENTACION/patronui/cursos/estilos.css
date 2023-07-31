@@ -26,7 +26,7 @@
     }
 
     .dropdown-toggle:hover {
-      background-color: #3498db;
+      background-color: #34db8a;
     }
     
     .dropdown-menu-content {
@@ -209,4 +209,270 @@
     text-decoration: none;
     font-size: 18px; /*vertical */
   }
+
+/* Estilos para la sección de contacto */
+
+.contact-section {
+  text-align: center;
+
+  
+}
+
+.contact-section h1 {
+  font-size: 32px;
+  color: #333;
+}
+
+.contact-section p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+ 
+    text-align: center;
+    padding: 20px; /* Reduce el padding para hacer el contenedor menos alto */   
+    background-color: #dfe9f3ba; /* Color de fondo plomito para el contenedor en modo claro */
+    border: 2px solid #b7c7e7; /* Borde azul alrededor del contenedor */
+    border-radius: 25px; /* Borde redondeado del contenedor */
+    border-radius: 25px; /* Borde redondeado del contenedor */
+    max-width: 350px; /* Ancho máximo del contenedor del formulario */
+    margin: 20px auto; /* Centrar el contenedor horizontalmente y agregar espacio arriba y abajo */
+  }
+  
+  
+  
+
+.contact-form label {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #353739; /* Borde azul de 2px de grosor */
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: #f2f2f2; /* Color de fondo de los campos de entrada en modo claro */
+  color: #333; /* Color del texto en los campos de entrada en modo claro */
+  outline: none; /* Eliminar el contorno en los campos enfocados */
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  background-color: #d00c10;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.contact-form button:hover {
+  background-color: #d00c10;
+}
+
+.contact-form button:focus {
+  outline: none;
+}
+
+.contact-form button:active {
+  transform: translateY(1px);
+}
+
+
+/* Estilos para la sección de crear cuenta nueva */
+.signup-section {
+  text-align: center;
+  padding: 20px; /* Reduce el padding para hacer el contenedor menos alto */
+  background-color: #dfe9f3ba; /* Color de fondo plomito para el contenedor en modo claro */
+  border: 2px solid #b7c7e7; /* Borde azul alrededor del contenedor */
+  border-radius: 25px; /* Borde redondeado del contenedor */
+  max-width: 350px; /* Ancho máximo del contenedor del formulario */
+  margin: 20px auto; /* Centrar el contenedor horizontalmente y agregar espacio arriba y abajo */
+}
+
+/* Estilos para el menú de navegación */
+.dropdown-menu {
+  position: relative;
+  float: right;
+  margin-bottom: 20px; /* Agrega un margen inferior para separar el menú del formulario */
+}
+
+
+.signup-section h1 {
+  font-size: 32px;
+  color: #333; /* Color del texto en modo claro */
+}
+
+.signup-section p {
+  font-size: 18px;
+  color: #555; /* Color del texto en modo claro */
+  margin-bottom: 30px;
+}
+
+.signup-form {
+  max-width: 400px; /* Ancho máximo del formulario */
+  margin: 0 auto; /* Centrar el formulario horizontalmente */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-form label {
+  font-size: 18px;
+  color: #333; /* Color del texto en modo claro */
+  margin-bottom: 8px;
+}
+
+.signup-form input,
+.signup-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #34648f;
+  background-color: #f2f2f2; /* Color de fondo de los campos de entrada en modo claro */
+  color: #333; /* Color del texto en los campos de entrada en modo claro */
+  outline: none; /* Eliminar el contorno en los campos enfocados */
+}
+
+.signup-form textarea {
+  resize: vertical;
+}
+
+.signup-form button {
+  background-color: #e50914; /* Color del botón en modo claro */
+  color: #fff; /* Color del texto en el botón en modo claro */
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.signup-form button:hover {
+  background-color: #d00c10; /* Color del botón al pasar el cursor en modo claro */
+}
+
+.signup-form button:focus {
+  outline: none;
+}
+
+.signup-form button:active {
+  transform: translateY(1px);
+}
+
+
+/* Estilos para el Patrón de Tarjetas (Cards) en la sección de Empresas Aliadas */
+.empresas-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.seccion {
+  text-align: center;
+}
+.empresa-card {
+  background-color: #d1e5ee;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  width: 300px;
+  transition: box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar horizontalmente los elementos dentro de la tarjeta */
+}
+
+/* Estilos para centrar el texto al centro */
+.aliadas {
+  text-align: center;
+}
+
+
+.empresa-card:hover {
+  box-shadow: 0 15px 18px rgba(0, 0, 0, 0.2);
+}
+
+.empresa-card img {
+  width: 220px; /* Ajustar el tamaño de la imagen */
+  height: 220px; /* Ajustar el tamaño de la imagen */
+  object-fit: cover;
+  border-radius: 50%; /* Hacer que la imagen sea redonda */
+  margin-top: 20px; /* Espacio entre la imagen y el título */
+}
+
+
+.empresa-card h2 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.empresa-card p {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+
+/* mas denosotros */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+main {
+  padding: 20px;
+}
+
+.conoce-nosotros {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.contenido {
+  max-width: 600px;
+}
+
+.conoce-nosotros h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #4d4d4d;
+}
+
+.conoce-nosotros p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.platzi-img {
+  width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 

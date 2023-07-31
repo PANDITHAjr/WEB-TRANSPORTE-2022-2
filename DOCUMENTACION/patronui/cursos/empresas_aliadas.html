@@ -1,0 +1,110 @@
+
+<link rel="stylesheet" href="estilos.css">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empresas Aliadas</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <!-- Encabezado -->
+  <header>
+    <nav>
+      <div class="tabs">
+        <button class="tab-button" onclick="redirectToHome()">Home</button>
+        <button class="tab-button active" onclick="redirectToCrearcuenta()">Crear cuenta</button>
+        <button class="tab-button" onclick="redirectToContactanos()">Contactanos</button>
+        <button class="tab-button" onclick=" redirectToEaliadas()">Empresas Aliadas</button>
+       
+    
+      </div>
+
+      <script>
+            function redirectToHome(){ 
+            window.location.href = "index.html"; }
+
+
+            function redirectToContactanos() {
+                window.location.href = "contactanos.html"; // Reemplaza 'contact-form' con el ID de la sección de 'Contáctanos'
+                    
+            }
+            function redirectToCrearcuenta(){ 
+            window.location.href = "crearcuenta.html"; }
+
+            function redirectToEaliadas(){ 
+            window.location.href = "empresas_aliadas.html"; }
+
+            function changeTab(evt, tabName) {
+
+        }
+    </script>
+   
+  
+    <!-- script para PatrónUI de Navegación por Pestañas (Tabs) -->
+
+    <script>
+      function changeTab(evt, tabName) {
+        const tabContents = document.getElementsByClassName("tab-content");
+        for (let i = 0; i < tabContents.length; i++) {
+          tabContents[i].classList.remove("active");
+        }
+
+        const tabButtons = document.getElementsByClassName("tab-button");
+        for (let i = 0; i < tabButtons.length; i++) {
+          tabButtons[i].classList.remove("active");
+        }
+
+        document.getElementById(tabName).classList.add("active");
+        evt.currentTarget.classList.add("active");
+      }
+    </script>
+
+
+    </nav>
+  </header>
+
+  <!-- Contenido de la página -->
+  <main>
+    <div class="empresas-section">
+      <h1 class="aliadas">Empresas Aliadas</h1>
+      <p class="seccion ">En esta sección encontrarás nuestras empresas aliadas que forman parte de esta gran familia.</p>
+    </div>
+
+    <div class="empresas-container">
+      <div class="empresa-card">
+        <img src="https://pbs.twimg.com/ext_tw_video_thumb/1495531054391775237/pu/img/kFIvytKapUfnasSg.jpg:large" alt="PLATZI">
+        <h2>PLATZI</h2>
+        <p class="descripcion">Platzi es una plataforma latinoamericana de educación en línea. Fue fundada en 2011 por el ingeniero colombiano Freddy Vega.</p>
+      </div>
+
+      <div class="empresa-card">
+        <img src="https://comunidadblogger.net/wp-content/uploads/2020/10/Udemy-logo.png" alt="UDEMY">
+        <h2>UDEMY </h2>
+        <p >Utiliza contenido de creadores en línea para vender y así conseguir ganancias cualquier persona puede subir contenido de aprendizaje.</p>
+      </div>
+
+      <!-- Agrega más tarjetas de empresa aquí -->
+    </div>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <div class="footer-contacto">
+      <h3>Contacto</h3>
+      <p>Email: info@tuempresa.com</p>
+      <p>Teléfono: +1234567890</p>
+    </div>
+
+    <div class="footer-redsocial">
+      <h3>Redes Sociales</h3>
+      <ul class="social-icons">
+        <li><a href="#" target="_blank">Facebook</a></li>
+        <li><a href="#" target="_blank">Twitter</a></li>
+        <li><a href="#" target="_blank">Instagram</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
