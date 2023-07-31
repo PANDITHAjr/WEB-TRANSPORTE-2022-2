@@ -4,20 +4,24 @@
     <div class="container">
         <div class="row justify-content-center">
 
-            <div class="col-md-8">
-                <div class="row">
-                    <div class="col s12 m4">
-                        <div class="card">
-                            <div class="card-image">
-                                {{-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp8Jxw998h79i4ujAGtowKQrfnDXv0YdetT4k2YI0Tv42UUPmOczJJWVuikNma6Jzu65I&usqp=CAU"> --}}
-                                {{-- <span style="color:blue" class="card-title">FICH</span> --}}
-                                <img class="card-img" src="{{ asset('images/baner.png') }}"
-                                    style="width: 800px; height: 145px">
+            <div class="container">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-md-8 d-flex justify-content-center">
+                        <div class="row">
+                            <div class="col s12 m4">
+                                <div class="card">
+                                    <div class="card-image">
+                                        {{-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp8Jxw998h79i4ujAGtowKQrfnDXv0YdetT4k2YI0Tv42UUPmOczJJWVuikNma6Jzu65I&usqp=CAU"> --}}
+                                        {{-- <span style="color:blue" class="card-title">FICH</span> --}}
+                                        <img class="card-img" src="{{ asset('images/baner.png') }}" style="width: 815px; height: 115px">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
 
             <div class="col-md-8">
                 <div class="row">
