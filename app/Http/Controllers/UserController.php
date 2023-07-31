@@ -25,8 +25,8 @@ class UserController extends Controller
 
         $usuarios = User::query();
         if($buscar){
-            $usuarios->where('nombre', 'like', "%$buscar%")
-            ->orWhere('ci','like',"%$buscar%");
+            $usuarios->where('name', 'like', "%$buscar%")
+            ->orWhere('email','like',"%$buscar%");
         }
         $usuarios = $usuarios->get();
 

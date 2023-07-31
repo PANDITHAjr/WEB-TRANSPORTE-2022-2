@@ -20,7 +20,8 @@ class PersonalController extends Controller
         $personales = Personal::query();
         if($buscar){
             $personales->where('nombre', 'like', "%$buscar%")
-            ->orWhere('ci','like',"%$buscar%");
+            ->orWhere('ci','like',"%$buscar%")
+            ->orWhere('apellido','like',"%$buscar%");
         }
         $personales = $personales->get();
 
