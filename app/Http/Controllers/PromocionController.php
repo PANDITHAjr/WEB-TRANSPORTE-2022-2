@@ -7,10 +7,26 @@ use Illuminate\Http\Request;
 
 class PromocionController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $promocions = Promocion::all();
+        // $promociones = Promocion::all();
+        // return view('promocion.index', compact('promociones'));
 
+        $buscar = $request->input('buscar');
+        $refrescar = $request->input('refrescar');
+
+        $promociones = Promocion::query();
+        if($buscar){
+            $promociones->where('nombre', 'like', "%$buscar%")
+            ->orWhere('descripcion','like',"%$buscar%");
+        }
+        $promociones = $promociones->get();
+
+        if($refrescar){
+            $promociones = Promocion::all();
+        }
+
+        $promociones = Promocion::paginate(10);
         return view('promocion.index', compact('promociones'));
     }
 
@@ -32,13 +48,13 @@ class PromocionController extends Controller
     public function show($id)
     {
         $promocion = Promocion::findOrFail($id);
-        return view('promocion.show', compact('promocion'));
+        return view('promocion.show', compact('promociones'));
     }
 
     public function edit($id)
     {
         $promocion = Promocion::findOrFail($id);
-        return view('promocion.edit', compact('promocion'));
+        return view('promocion.edit', compact('promociones'));
     }
 
     public function update(Request $request, $id)

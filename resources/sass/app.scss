@@ -1,0 +1,76 @@
+/* Estilos para el toggle switch */
+.toggle-switch {
+    margin-top: 15px;
+    position: relative;
+    width: 65px;
+    height: 40px;
+  }
+
+  /* Estilos para el input checkbox oculto */
+  .toggle-switch input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /* Estilos para la etiqueta del toggle switch */
+  .toggle-switch label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 34px;
+    background-color: #ccc;
+    border-radius: 17px;
+    cursor: pointer;
+  }
+
+  /* Estilos para el círculo deslizante del toggle switch */
+  .toggle-switch label::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s;
+  }
+
+  /* Estilos para el toggle switch en modo oscuro */
+  .dark-mode .toggle-switch label {
+    background-color: #444;
+  }
+
+  /* Estilos para el círculo deslizante en modo oscuro */
+  .dark-mode .toggle-switch label::after {
+    transform: translateX(26px);
+  }
+/* Estilos para el modo oscuro */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+  }
+
+
+  /////////
+  /* Estilos generales para el modo claro */
+body {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  /* Estilos para el modo oscuro */
+  body.dark-mode {
+    background-color: #333333;
+    color: #ffffff;
+  }
+
+  /* Otros estilos para el modo oscuro */
+  .dark-mode .card {
+    background-color: #444444;
+    color: #ffffff;
+  }
+
+  /* ... y así sucesivamente para otros elementos que deben cambiar en el modo oscuro */

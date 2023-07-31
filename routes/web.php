@@ -1,11 +1,14 @@
 <?php
 use App\Http\Controllers\VehiculoController;
+use App\Http\Controllers\MantenimientoController;
 use App\Http\Controllers\ConductorController;
 use App\Http\Controllers\PersonalController;
 use App\Http\Controllers\TipoPersonalController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\SindicatoController;
+use App\Http\Controllers\RutaController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PromocionController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -106,6 +109,42 @@ Route::middleware(['auth'])->group(function(){
         Route::get('/{id}/edit', [SindicatoController::class, 'edit'])->name('sindicato.edit');
         Route::put('/{id}', [SindicatoController::class, 'update'])->name('sindicato.update');
         Route::get('/{id}/destroy', [SindicatoController::class, 'destroy'])->name('sindicato.destroy');
+
+    });
+
+    Route::group(['prefix'=>'promocion'], function(){
+
+       Route::get('/', [PromocionController::class, 'index'])->name('promocion.index');
+       Route::get('/create', [PromocionController::class, 'create']) -> name('promocion.create');
+       Route::post('/', [PromocionController::class, 'store'])->name('promocion.store');
+       Route::get('/{id}', [PromocionController::class, 'show'])->name('promocion.show');
+       Route::get('/{id}/edit', [PromocionController::class, 'edit'])->name('promocion.edit');
+       Route::put('/{id}', [PromocionController::class, 'update'])->name('promocion.update');
+       Route::get('/{id}/destroy', [PromocionController::class, 'destroy'])->name('promocion.destroy');
+
+    });
+
+    Route::group(['prefix'=>'ruta'], function(){
+
+        Route::get('/', [RutaController::class, 'index'])->name('ruta.index');
+        Route::get('/create', [RutaController::class, 'create']) -> name('ruta.create');
+        Route::post('/', [RutaController::class, 'store'])->name('ruta.store');
+        Route::get('/{id}', [RutaController::class, 'show'])->name('ruta.show');
+        Route::get('/{id}/edit', [RutaController::class, 'edit'])->name('ruta.edit');
+        Route::put('/{id}', [RutaController::class, 'update'])->name('ruta.update');
+        Route::get('/{id}/destroy', [RutaController::class, 'destroy'])->name('ruta.destroy');
+
+    });
+
+    Route::group(['prefix'=>'mantenimiento'], function(){
+
+        Route::get('/', [MantenimientoController::class, 'index'])->name('mantenimiento.index');
+        Route::get('/create', [MantenimientoController::class, 'create']) -> name('mantenimiento.create');
+        Route::post('/', [MantenimientoController::class, 'store'])->name('mantenimiento.store');
+        Route::get('/{id}', [MantenimientoController::class, 'show'])->name('mantenimiento.show');
+        Route::get('/{id}/edit', [MantenimientoController::class, 'edit'])->name('mantenimiento.edit');
+        Route::put('/{id}', [MantenimientoController::class, 'update'])->name('mantenimiento.update');
+        Route::get('/{id}/destroy', [MantenimientoController::class, 'destroy'])->name('mantenimiento.destroy');
 
     });
 

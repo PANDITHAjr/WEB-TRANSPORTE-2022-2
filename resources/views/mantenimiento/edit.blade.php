@@ -1,0 +1,74 @@
+@extends('layouts.app')
+@section('content')
+    <div class="row">
+        <form method="POST" action="{{ route('mantenimiento.update', [$mantenimiento->id]) }}">
+            @csrf
+            @method('PUT')
+
+            <div class="col s12 m10 offset-m1 l6 offset-l3 xl6 offset-xl3">
+                <div id="panel-left" class="card">
+
+                    <div class="card-content">
+                        <span class="card-title primary-text-color primary-text-style">
+                            Formulario de Edición
+                        </span>
+                        <div class="row">
+                            <div class="col s12 divider"></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12 m6">
+                                <input id="descripcion" type="text" class="validate" name="descripcion"
+                                    value="{{ $mantenimiento->descripcion }}">
+                                <label for="descripcion">Descripción:</label>
+                                @error('descripcion')
+                                    <span class="help-block red-text"> {{ $message }} </span>
+                                @enderror
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 m6">
+                                <input id="fecha" type="date" class="validate" name="fecha"
+                                    value="{{ $mantenimiento->fecha }}">
+                                <label for="fecha">Fecha:</label>
+                                @error('fecha')
+                                    <span class="help-block red-text"> {{ $message }} </span>
+                                @enderror
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 m6">
+                                <input id="monto" type="number" class="validate" name="monto"
+                                    value="{{ $mantenimiento->monto }}">
+                                <label for="monto">Monto(Bs.):</label>
+                                @error('monto')
+                                    <span class="help-block red-text"> {{ $message }} </span>
+                                @enderror
+                            </div>
+
+                        </div>
+                        <div class="input-field col s12 m6">
+                            <select name="id_vehiculo">
+                                <option selected disabled>Seleccione la Placa:</option>
+                                @foreach ($vehiculo as $mantenimiento)
+                                    <option value="{{ $mantenimiento->id }}">{{ $mantenimiento->placa }}</option>
+                                @endforeach
+                            </select>
+                            <label for="id_vehiculo">Vehiculo:</label>
+                        </div>
+
+
+                        <div class="card-action right-align">
+                            <button type="submit" class="btn-floating btn-large blue pulse"><i
+                                    class="material-icons">save</i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </form>
+    </div>
+@endsection

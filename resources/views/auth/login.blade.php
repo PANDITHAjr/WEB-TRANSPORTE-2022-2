@@ -4,14 +4,20 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col s6 offset-m3">
-            
+
             <div class="row"></div>
             <div class="row"></div>
 
             <div class="card green lighten-5">
                 <div class="card-content">
-
-                    <div class="card-title">Inicio de sesión</div>
+                    <div style="color: black; font-weight: bold; text-align: center;" class="card-title">Inicio de sesión</div>
+                        <div class="col s5 offset-s4">
+                            <div class="row valign-wrapper">
+                                <div class="col s12">
+                                    <img class="card-img" src="{{ asset('images/augrm.png') }}" style="width: 80%;">
+                                </div>
+                            </div>
+                        </div>
 
                     <form method="POST" action="{{ route('login') }}">
                         @csrf

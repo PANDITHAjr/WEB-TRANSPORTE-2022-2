@@ -10,4 +10,5 @@ class Promocion extends Model
     use HasFactory;
 
     protected $table = 'promociones';
+
 }

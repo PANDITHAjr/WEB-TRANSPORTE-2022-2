@@ -22,4 +22,5 @@ class Vehiculo extends Model
     public function mantenimiento(){
         return $this->hasMany(Mantenimiento::class,'id_vehiculo');
     }
+
 }

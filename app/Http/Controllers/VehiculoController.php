@@ -3,14 +3,33 @@
 namespace App\Http\Controllers;
 
 use App\Models\Vehiculo;
+use App\Models\Personal;
+use App\Models\Sindicato;
 use Illuminate\Http\Request;
 
 class VehiculoController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
-        $vehiculos = vehiculo::all();
+        // $vehiculos = Vehiculo::all();
+        // return view('vehiculo.index', compact('vehiculos'));
+
+        $buscar = $request->input('buscar');
+        $refrescar = $request->input('refrescar');
+
+        $vehiculos = Vehiculo::query();
+        if($buscar){
+            $vehiculos->where('placa', 'like', "%$buscar%")
+            ->orWhere('modelo','like',"%$buscar%");
+        }
+        $vehiculos = $vehiculos->get();
+
+        if($refrescar){
+            $vehiculos = Vehiculo::all();
+        }
+
+        $vehiculos = Vehiculo::paginate(10);
         return view('vehiculo.index', compact('vehiculos'));
 
     }
@@ -18,7 +37,9 @@ class VehiculoController extends Controller
 
     public function create()
     {
-        return view('vehiculo.create');
+        $personal = Personal::all();
+        $sindicato = Sindicato::all();
+        return view('vehiculo.create', compact('sindicato'), compact('personal'));
     }
 
 
@@ -29,7 +50,6 @@ class VehiculoController extends Controller
         $vehiculo->placa = $request->input('placa');
         $vehiculo->marca = $request->input('marca');
         $vehiculo->modelo = $request->input('modelo');
-        $vehiculo->descripcion = $request->input('descripcion');
         $vehiculo->id_personal = $request->input('id_personal');
         $vehiculo->id_sindicato = $request->input('id_sindicato');
         $vehiculo->save();
