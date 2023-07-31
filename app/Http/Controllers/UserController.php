@@ -16,27 +16,28 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
-    {
-        // $usuarios = User::all();
-        // return view('usuario.index',compact('usuarios'));
+{
+    $buscar = $request->input('buscar');
+    $refrescar = $request->input('refrescar');
 
-        $buscar = $request->input('buscar');
-        $refrescar = $request->input('refrescar');
+    $usuarios = User::query();
 
-        $usuarios = User::query();
-        if($buscar){
-            $usuarios->where('name', 'like', "%$buscar%")
-            ->orWhere('email','like',"%$buscar%");
-        }
-        $usuarios = $usuarios->get();
-
-        if($refrescar){
-            $usuarios = User::all();
-        }
-
-        $usuarios = User::paginate(10);
-        return view('usuario.index', compact('usuarios'));
+    if ($buscar) {
+        $usuarios->where('name', 'like', "%$buscar%")
+                 ->orWhere('email', 'like', "%$buscar%");
     }
+
+    if ($refrescar) {
+        // Si se solicita refrescar, obtenemos todos los registros sin paginación.
+        $usuarios = $usuarios->get();
+    } else {
+        // Aplicamos la paginación con un límite de 10 registros por página.
+        $usuarios = $usuarios->paginate(10);
+    }
+
+    return view('usuario.index', compact('usuarios'));
+}
+
     public function create()
     {
         $personales = Personal::all();

@@ -9,26 +9,27 @@ class RutaController extends Controller
 {
     public function index(Request $request)
     {
-        // $rutas = Ruta::all();
-        // return view('ruta.index', compact('rutas'));
-
         $buscar = $request->input('buscar');
         $refrescar = $request->input('refrescar');
 
         $rutas = Ruta::query();
-        if($buscar){
+
+        if ($buscar) {
             $rutas->where('origen', 'like', "%$buscar%")
-            ->orWhere('destino','like',"%$buscar%");
-        }
-        $rutas = $rutas->get();
-
-        if($refrescar){
-            $rutas = Ruta::all();
+                  ->orWhere('destino', 'like', "%$buscar%");
         }
 
-        $rutas = Ruta::paginate(10);
+        if ($refrescar) {
+            // Si se solicita refrescar, obtenemos todos los registros sin paginación.
+            $rutas = $rutas->get();
+        } else {
+            // Aplicamos la paginación con un límite de 10 registros por página.
+            $rutas = $rutas->paginate(10);
+        }
+
         return view('ruta.index', compact('rutas'));
     }
+
 
     public function create()
     {

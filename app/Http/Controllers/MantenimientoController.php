@@ -10,29 +10,30 @@ class MantenimientoController extends Controller
 {
     public function index(Request $request)
     {
-        // $mantenimientos = Mantenimiento::all();
-        // return view('mantenimiento.index', compact('mantenimientos'));
-
         $buscar = $request->input('buscar');
         $refrescar = $request->input('refrescar');
 
         $mantenimientos = Mantenimiento::query();
         $vehiculo = Vehiculo::query();
-        if($buscar){
+
+        if ($buscar) {
             $mantenimientos->where('descripcion', 'like', "%$buscar%")
-               ->orWhereHas('vehiculo', function ($query) use ($buscar) {
+                ->orWhereHas('vehiculo', function ($query) use ($buscar) {
                     $query->where('placa', 'like', "%$buscar%");
-               });
-        }
-        $mantenimientos = $mantenimientos->get();
-
-        if($refrescar){
-            $mantenimientos = Mantenimiento::all();
+                });
         }
 
-        $mantenimientos = Mantenimiento::paginate(10);
+        if ($refrescar) {
+            // Si se solicita refrescar, obtenemos todos los registros sin paginación.
+            $mantenimientos = $mantenimientos->get();
+        } else {
+            // Aplicamos la paginación con un límite de 10 registros por página.
+            $mantenimientos = $mantenimientos->paginate(10);
+        }
+
         return view('mantenimiento.index', compact('mantenimientos'));
     }
+
 
     public function create()
     {

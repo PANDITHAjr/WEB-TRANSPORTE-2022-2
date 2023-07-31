@@ -11,28 +11,28 @@ class VehiculoController extends Controller
 {
 
     public function index(Request $request)
-    {
-        // $vehiculos = Vehiculo::all();
-        // return view('vehiculo.index', compact('vehiculos'));
+{
+    $buscar = $request->input('buscar');
+    $refrescar = $request->input('refrescar');
 
-        $buscar = $request->input('buscar');
-        $refrescar = $request->input('refrescar');
+    $vehiculos = Vehiculo::query();
 
-        $vehiculos = Vehiculo::query();
-        if($buscar){
-            $vehiculos->where('placa', 'like', "%$buscar%")
-            ->orWhere('modelo','like',"%$buscar%");
-        }
-        $vehiculos = $vehiculos->get();
-
-        if($refrescar){
-            $vehiculos = Vehiculo::all();
-        }
-
-        $vehiculos = Vehiculo::paginate(10);
-        return view('vehiculo.index', compact('vehiculos'));
-
+    if ($buscar) {
+        $vehiculos->where('placa', 'like', "%$buscar%")
+                  ->orWhere('modelo', 'like', "%$buscar%");
     }
+
+    if ($refrescar) {
+        // Si se solicita refrescar, obtenemos todos los registros sin paginación.
+        $vehiculos = $vehiculos->get();
+    } else {
+        // Aplicamos la paginación con un límite de 10 registros por página.
+        $vehiculos = $vehiculos->paginate(10);
+    }
+
+    return view('vehiculo.index', compact('vehiculos'));
+}
+
 
 
     public function create()

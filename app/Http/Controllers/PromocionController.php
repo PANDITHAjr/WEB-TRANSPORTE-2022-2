@@ -9,26 +9,27 @@ class PromocionController extends Controller
 {
     public function index(Request $request)
     {
-        // $promociones = Promocion::all();
-        // return view('promocion.index', compact('promociones'));
-
         $buscar = $request->input('buscar');
         $refrescar = $request->input('refrescar');
 
         $promociones = Promocion::query();
-        if($buscar){
+
+        if ($buscar) {
             $promociones->where('nombre', 'like', "%$buscar%")
-            ->orWhere('descripcion','like',"%$buscar%");
-        }
-        $promociones = $promociones->get();
-
-        if($refrescar){
-            $promociones = Promocion::all();
+                ->orWhere('descripcion', 'like', "%$buscar%");
         }
 
-        $promociones = Promocion::paginate(10);
+        if ($refrescar) {
+            // Si se solicita refrescar, obtenemos todos los registros sin paginación.
+            $promociones = $promociones->get();
+        } else {
+            // Aplicamos la paginación con un límite de 10 registros por página.
+            $promociones = $promociones->paginate(10);
+        }
+
         return view('promocion.index', compact('promociones'));
     }
+
 
     public function create()
     {
