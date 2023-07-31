@@ -26,6 +26,7 @@ class PromocionController extends Controller
             $promociones = Promocion::all();
         }
 
+        $promociones = Promocion::paginate(10);
         return view('promocion.index', compact('promociones'));
     }
 

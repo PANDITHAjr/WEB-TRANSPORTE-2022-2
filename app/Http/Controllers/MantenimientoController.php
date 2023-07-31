@@ -30,6 +30,7 @@ class MantenimientoController extends Controller
             $mantenimientos = Mantenimiento::all();
         }
 
+        $mantenimientos = Mantenimiento::paginate(10);
         return view('mantenimiento.index', compact('mantenimientos'));
     }
 

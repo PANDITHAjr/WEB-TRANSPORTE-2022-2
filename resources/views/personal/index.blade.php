@@ -87,15 +87,45 @@
                                                     class="btn-floating amber accent-4 pulse"><i
                                                         class="material-icons">create</i></a>
                                         @endcan
-                                        {{-- <a href="{{ route('personal.show', [$persona->id]) }}"><span class="btn-floating black pulse"><i class="material-icons">visibility</i></a>
-                                    <a href="{{ route('personal.edit', [$persona->id]) }}"><span class="btn-floating amber accent-4 pulse"><i class="material-icons">create</i></a>
-                                    <a href="{{ route('personal.destroy', [$persona->id]) }}"><span class="btn-floating red accent-4 pulse"><i class="material-icons">delete_forever</i></a>
-                                </td> --}}
+                                        @can('chofer')
+                                        <a href="{{ route('personal.show', [$mantenimiento->id]) }}"><span
+                                                class="btn-floating black pulse"><i class="material-icons">visibility</i></a>
+                                    @endcan
+                                    @can('cliente')
+                                        <a href="{{ route('personal.show', [$mantenimiento->id]) }}"><span
+                                                class="btn-floating black pulse"><i class="material-icons">visibility</i></a>
+                                    @endcan
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
                     </table>
                 </div>
             </div>
+    </div>
+    <!-- Add customized pagination links -->
+    <!-- Add customized pagination links within a colored box -->
+    <div class="row center-align">
+        <div class="col s12">
+            <div style="background-color: black; padding: 10px; border-radius: 5px;">
+                <ul class="pagination" style="margin: 0;">
+                    {{-- Previous Page Link --}}
+                    @if ($personales->onFirstPage())
+                        <li style="color: red; font-weight: bold;" class="disabled"><span>ANTERIOR</span></li>
+                    @else
+                        <li class="waves-effect"><a style="color: blue; font-weight: bold;"
+                                href="{{ $personales->previousPageUrl() }}">ANTERIOR</a></li>
+                    @endif
+
+                    {{-- Next Page Link --}}
+                    @if ($personales->hasMorePages())
+                        <li class="waves-effect"><a style="color: blue; font-weight: bold;"
+                                href="{{ $personales->nextPageUrl() }}">SIGUIENTE</a></li>
+                    @else
+                        <li style="color: red; font-weight: bold;" class="disabled"><span>SIGUIENTE</span></li>
+                    @endif
+                </ul>
+            </div>
+        </div>
     </div>
 @endsection

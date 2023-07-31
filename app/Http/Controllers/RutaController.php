@@ -26,6 +26,7 @@ class RutaController extends Controller
             $rutas = Ruta::all();
         }
 
+        $rutas = Ruta::paginate(10);
         return view('ruta.index', compact('rutas'));
     }
 

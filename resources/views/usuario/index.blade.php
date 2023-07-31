@@ -54,7 +54,28 @@
                 </table>
             </div>
         </div>
-    </div>
+          <!-- Add customized pagination links -->
+       <!-- Add customized pagination links within a colored box -->
+       <div class="row center-align">
+        <div class="col s12">
+            <div style="background-color: black; padding: 10px; border-radius: 5px;">
+                <ul class="pagination" style="margin: 0;">
+                    {{-- Previous Page Link --}}
+                    @if ($usuarios->onFirstPage())
+                        <li style="color: red; font-weight: bold;" class="disabled"><span>ANTERIOR</span></li>
+                    @else
+                        <li class="waves-effect"><a style="color: blue; font-weight: bold;" href="{{ $usuarios->previousPageUrl() }}">ANTERIOR</a></li>
+                    @endif
 
+                    {{-- Next Page Link --}}
+                    @if ($usuarios->hasMorePages())
+                        <li class="waves-effect"><a style="color: blue; font-weight: bold;" href="{{ $usuarios->nextPageUrl() }}">SIGUIENTE</a></li>
+                    @else
+                        <li style="color: red; font-weight: bold;" class="disabled"><span>SIGUIENTE</span></li>
+                    @endif
+                </ul>
+            </div>
+        </div>
+    </div>
 @endsection
 

@@ -34,6 +34,7 @@ class UserController extends Controller
             $usuarios = User::all();
         }
 
+        $usuarios = User::paginate(10);
         return view('usuario.index', compact('usuarios'));
     }
     public function create()

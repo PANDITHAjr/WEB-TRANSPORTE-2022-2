@@ -25,6 +25,7 @@ class SindicatoController extends Controller
             $sindicatos = Sindicato::all();
         }
 
+        $sindicatos = Sindicato::paginate(10);
         return view('sindicato.index', compact('sindicatos'));
     }
 

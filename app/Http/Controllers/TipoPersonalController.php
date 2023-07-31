@@ -26,6 +26,7 @@ class TipoPersonalController extends Controller
             $tipopersonales = TipoPersonal::all();
         }
 
+        $tipopersonales = TipoPersonal::paginate(10);
         return view('tipopersonal.index', compact('tipopersonales'));
     }
 

@@ -28,6 +28,7 @@ class PersonalController extends Controller
             $personales = Personal::all();
         }
 
+        $personales = Personal::paginate(10);
         return view('personal.index', compact('personales'));
     }
 
