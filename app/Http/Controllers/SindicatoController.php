@@ -8,26 +8,27 @@ use Illuminate\Http\Request;
 class SindicatoController extends Controller
 {
     public function index(Request $request)
-    {
-        // $sindicatos = Sindicato::all();
-        // return view('sindicato.index', compact('sindicatos'));
+{
+    $buscar = $request->input('buscar');
+    $refrescar = $request->input('refrescar');
 
-        $buscar = $request->input('buscar');
-        $refrescar = $request->input('refrescar');
+    $sindicatos = Sindicato::query();
 
-        $sindicatos = Sindicato::query();
-        if($buscar){
-            $sindicatos->where('nombre', 'like', "%$buscar%");
-        }
-        $sindicatos = $sindicatos->get();
-
-        if($refrescar){
-            $sindicatos = Sindicato::all();
-        }
-
-        $sindicatos = Sindicato::paginate(10);
-        return view('sindicato.index', compact('sindicatos'));
+    if ($buscar) {
+        $sindicatos->where('nombre', 'like', "%$buscar%");
     }
+
+    if ($refrescar) {
+        // Si se solicita refrescar, obtenemos todos los registros sin paginación.
+        $sindicatos = $sindicatos->get();
+    } else {
+        // Aplicamos la paginación con un límite de 10 registros por página.
+        $sindicatos = $sindicatos->paginate(10);
+    }
+
+    return view('sindicato.index', compact('sindicatos'));
+}
+
 
     public function create()
     {

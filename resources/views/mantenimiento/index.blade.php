@@ -4,7 +4,7 @@
     <div class="row" style="margin-top: 5%">
         @can('admin')
             <div class="col s4">
-                <a href="{{ route('ruta.create') }}" class="waves-effect light-blue accent-4 btn"><i
+                <a href="{{ route('mantenimiento.create') }}" class="waves-effect light-blue accent-4 btn"><i
                         class="material-icons left">add</i>REGISTRAR</a>
             </div>
         @endcan

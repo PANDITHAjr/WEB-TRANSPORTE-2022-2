@@ -10,25 +10,26 @@ class TipoPersonalController extends Controller
 
     public function index(Request $request)
     {
-        // $tipopersonales = TipoPersonal::all();
-        // return view('tipopersonal.index', compact('tipopersonales'));
-
         $buscar = $request->input('buscar');
         $refrescar = $request->input('refrescar');
 
         $tipopersonales = TipoPersonal::query();
-        if($buscar){
+
+        if ($buscar) {
             $tipopersonales->where('descripcion', 'like', "%$buscar%");
         }
-        $tipopersonales = $tipopersonales->get();
 
-        if($refrescar){
-            $tipopersonales = TipoPersonal::all();
+        if ($refrescar) {
+            // Si se solicita refrescar, obtenemos todos los registros sin paginación.
+            $tipopersonales = $tipopersonales->get();
+        } else {
+            // Aplicamos la paginación con un límite de 10 registros por página.
+            $tipopersonales = $tipopersonales->paginate(10);
         }
 
-        $tipopersonales = TipoPersonal::paginate(10);
         return view('tipopersonal.index', compact('tipopersonales'));
     }
+
 
     public function create()
     {

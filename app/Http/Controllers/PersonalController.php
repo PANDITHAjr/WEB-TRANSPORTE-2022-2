@@ -11,6 +11,9 @@ class PersonalController extends Controller
 {
     public function index(Request $request)
 {
+    // $personales = Personal::all();
+        // return view('personal.index', compact('personales'));
+
     $buscar = $request->input('buscar');
     $refrescar = $request->input('refrescar');
 
