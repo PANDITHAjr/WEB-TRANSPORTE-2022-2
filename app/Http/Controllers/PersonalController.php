@@ -10,28 +10,29 @@ use Illuminate\Http\Request;
 class PersonalController extends Controller
 {
     public function index(Request $request)
-    {
-        // $personales = Personal::all();
-        // return view('personal.index', compact('personales'));
+{
+    $buscar = $request->input('buscar');
+    $refrescar = $request->input('refrescar');
 
-        $buscar = $request->input('buscar');
-        $refrescar = $request->input('refrescar');
+    $personales = Personal::query();
 
-        $personales = Personal::query();
-        if($buscar){
-            $personales->where('nombre', 'like', "%$buscar%")
-            ->orWhere('ci','like',"%$buscar%")
-            ->orWhere('apellido','like',"%$buscar%");
-        }
-        $personales = $personales->get();
-
-        if($refrescar){
-            $personales = Personal::all();
-        }
-
-        $personales = Personal::paginate(10);
-        return view('personal.index', compact('personales'));
+    if ($buscar) {
+        $personales->where('nombre', 'like', "%$buscar%")
+                  ->orWhere('ci', 'like', "%$buscar%")
+                  ->orWhere('apellido', 'like', "%$buscar%");
     }
+
+    if ($refrescar) {
+        // Si se solicita refrescar, obtenemos todos los registros sin paginación.
+        $personales = $personales->get();
+    } else {
+        // Aplicamos la paginación con un límite de 10 registros por página.
+        $personales = $personales->paginate(10);
+    }
+
+    return view('personal.index', compact('personales'));
+}
+
 
     public function create(){
         $tipopersonal = TipoPersonal::all();
