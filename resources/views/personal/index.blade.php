@@ -54,16 +54,16 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($personales as $persona)
+                            @foreach ($personales as $personal)
                                 <tr>
-                                    <td>{{ $persona->id }}</td>
-                                    <td>{{ $persona->nombre }}</td>
-                                    <td>{{ $persona->apellido }}</td>
-                                    <td>{{ $persona->edad }}</td>
-                                    <td>{{ $persona->telefono }}</td>
-                                    <td>{{ $persona->ci }}</td>
-                                    <td>{{ $persona->tipo_personal->descripcion }}</td>
-                                    <td>{{ $persona->cat_lic }}</td>
+                                    <td>{{ $personal->id }}</td>
+                                    <td>{{ $personal->nombre }}</td>
+                                    <td>{{ $personal->apellido }}</td>
+                                    <td>{{ $personal->edad }}</td>
+                                    <td>{{ $personal->telefono }}</td>
+                                    <td>{{ $personal->ci }}</td>
+                                    <td>{{ $personal->tipo_personal->descripcion }}</td>
+                                    <td>{{ $personal->cat_lic }}</td>
                                     <td>
                                         {{-- <a href="{{ route('personal.show', [$persona->id]) }}"><span class="new badge teal" data-badge-caption="ver"></span></a>  --}}
                                         {{-- <a href="{{ route('personal.edit', [$persona->id]) }}"><span class="new badge amber accent-4" data-badge-caption="editar"></span></a> --}}
