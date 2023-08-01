@@ -51,13 +51,19 @@
                                 <button type="submit" class="btn btn-primary">
                                     ingresar
                                 </button>
-
+                                <div class="card-body text-center">
+                                    <div>
+                                        <p style="color: black; font-weight: bold;">Conoce nuestro sitio con este usuario de prueba</p>
+                                        <p>Usuario:cliente@cliente.com<br>Contraseña:cliente</p>
+                                    </div>
+                                </div>
                                 {{-- @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif --}}
                             </div>
+
                         </div>
                     </form>
                 </div>
