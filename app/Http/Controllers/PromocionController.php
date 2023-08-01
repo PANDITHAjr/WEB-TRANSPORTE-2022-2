@@ -49,13 +49,13 @@ class PromocionController extends Controller
     public function show($id)
     {
         $promocion = Promocion::findOrFail($id);
-        return view('promocion.show', compact('promociones'));
+        return view('promocion.show', compact('promocion'));
     }
 
     public function edit($id)
     {
         $promocion = Promocion::findOrFail($id);
-        return view('promocion.edit', compact('promociones'));
+        return view('promocion.edit', compact('promocion'));
     }
 
     public function update(Request $request, $id)

@@ -60,7 +60,9 @@ class VehiculoController extends Controller
     public function edit($id)
     {
         $vehiculo = vehiculo::findOrFail($id);
-        return view('vehiculo.edit', compact('vehiculo'));
+        $personal = Personal::all();
+        $sindicato = Sindicato::all();
+        return view('vehiculo.edit', compact('vehiculo', 'personal'), compact('sindicato'));
     }
 
     public function update(Request $request, $id)
@@ -70,7 +72,6 @@ class VehiculoController extends Controller
         $vehiculo->placa = $request->input('placa');
         $vehiculo->marca = $request->input('marca');
         $vehiculo->modelo = $request->input('modelo');
-        $vehiculo->descripcion = $request->input('descripcion');
         $vehiculo->id_personal = $request->input('id_personal');
         $vehiculo->id_sindicato = $request->input('id_sindicato');
         $vehiculo->save();

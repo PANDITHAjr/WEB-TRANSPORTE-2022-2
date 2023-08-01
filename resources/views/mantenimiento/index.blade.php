@@ -25,7 +25,7 @@
             <div style="text-align: center;" class="relative">
                 <input type="search" name="buscar" id="default-search"
                     class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-2xl bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Buscar descripcion o placa del vehiculo" required>
+                    placeholder="Buscar descripcion o placa" required>
                 <button style="margin: 0 auto;" type="submit" class="waves-effect light-blue accent-4 btn">Buscar</button>
             </div>
 

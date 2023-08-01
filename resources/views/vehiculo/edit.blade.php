@@ -49,11 +49,21 @@
                                 <span class="help-block red-text"> {{ $message }} </span>
                                 @enderror
                             </div>
+
+                            <div class="input-field col s12 m6">
+                                <select name="id_sindicato">
+                                    <option selected disabled>Seleccione una opción:</option>
+                                    @foreach ($sindicato as $vehiculo)
+                                        <option value="{{ $vehiculo->id }}">{{ $vehiculo->nombre}}</option>
+                                    @endforeach
+                                </select>
+                                <label for="id_sindicato">Sindicatos:</label>
+                            </div>
                             <div class="input-field col s12 m6">
                                 <select name="id_personal">
                                     <option selected disabled>Seleccione una opción:</option>
-                                    @foreach ($personal as $vehiculo)
-                                        <option value="{{ $vehiculo->id }}">{{ $vehiculo->nombre }}</option>
+                                    @foreach($personal as $vehiculo)
+                                    <option value="{{ $vehiculo->id }}">{{ $vehiculo->nombre}}</option>
                                     @endforeach
                                 </select>
                                 <label for="id_personal">Personal:</label>
