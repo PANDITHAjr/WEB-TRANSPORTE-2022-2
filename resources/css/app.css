@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import 'dark-mode';
+
 /* Estilos para el toggle switch */
 .toggle-switch {
   margin-top: 15px;
