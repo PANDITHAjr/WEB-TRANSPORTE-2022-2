@@ -25,7 +25,7 @@
                         <div class="row">
 
                             <div class="col s12 m5">
-                                <p class="primary-text-color secondary-text-style">Nombres:</p>
+                                <p class="primary-text-color secondary-text-style">Nombre:</p>
                             </div>
                             <div class="col s8 offset-s2 m7">
                                 <p class="secondary-text-color">{{$personal->nombre}}</p>
@@ -34,7 +34,7 @@
 
 
                             <div class="col s12 m5">
-                                <p class="primary-text-color secondary-text-style">Apellidos:</p>
+                                <p class="primary-text-color secondary-text-style">Apellido:</p>
                             </div>
                             <div class="col s8 offset-s2 m7">
                                 <p class="secondary-text-color">{{$personal->apellido}}</p>

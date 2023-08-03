@@ -18,7 +18,7 @@
 
                         <div class="row">
                             <div class="input-field col s12 m6">
-                                <input id="linea" type="text" class="validate" name="linea" value="{{old('linea')}}">
+                                <input id="linea" type="number" class="validate" name="linea" value="{{old('linea')}}">
                                 <label for="linea">Nr. de Linea:</label>
                                 @error('linea')
                                     <span class="help-block red-text"> {{ $message }} </span>
@@ -33,7 +33,7 @@
                             </div>
 
                             <div class="input-field col s12 m6">
-                                
+
                                 <input id="marca" type="text" class="validate" name="marca" value="{{old('marca')}}">
                                 <label for="marca">Marca:</label>
                                 @error('marca')

@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import 'dark-mode';
-
 /* Estilos para el toggle switch */
 .toggle-switch {
   margin-top: 15px;
@@ -76,3 +74,6 @@ body.dark-mode {
 }
 
 /* ... y así sucesivamente para otros elementos que deben cambiar en el modo oscuro */
+.dark-mode input[type=search] {
+  color: #ffffff; /* Cambiar el color del texto a blanco */
+}

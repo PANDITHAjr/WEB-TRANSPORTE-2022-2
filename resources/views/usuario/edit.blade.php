@@ -4,7 +4,7 @@
     <div class="row">
         <form method="POST" action="{{ route('usuario.update', [$usuario->id]) }}">
             @csrf
-            @method('PUT') 
+            @method('PUT')
 
             <div class="col s12 m10 offset-m1 l6 offset-l3 xl6 offset-xl3">
                 <div id="panel-left" class="card">
@@ -28,7 +28,7 @@
 
                             <div class="input-field col s12 m6">
                                 <input id="email" type="text" class="validate" name="email" value="{{ $usuario->email }}">
-                                <label for="email">Nombre de Usuario:</label>
+                                <label for="email">Email:</label>
                                 @error('email')
                                     <span class="help-block red-text"> {{ $message }} </span>
                                 @enderror
@@ -43,7 +43,7 @@
                                     </span>
                                 @enderror
                             </div>
-                            
+
                             <div class="input-field col s12 m6">
                                 <select name="id_personal">
                                     <option selected disabled>Seleccione una opción:</option>
@@ -52,7 +52,7 @@
                                     @endforeach
                                 </select>
                                 <label for="id_personal">Personal:</label>
-                            </div>  
+                            </div>
 
 
 

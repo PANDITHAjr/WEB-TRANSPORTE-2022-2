@@ -1,4 +1,4 @@
-<ul id="sidenav-left" class="sidenav black">
+<ul id="sidenav-left" class="sidenav grey blue-grey darken-4">
     <li>
         <div class="user-view center">
             <div class="background">

@@ -32,10 +32,10 @@
                             </div>
 
                             <div class="col s12 m5">
-                                <p class="primary-text-color secondary-text-style">Descripcion:</p>
+                                <p class="primary-text-color secondary-text-style">Marca:</p>
                             </div>
                             <div class="col s8 offset-s2 m7">
-                                <p class="secondary-text-color">{{$vehiculo->descripcion}}</p>
+                                <p class="secondary-text-color">{{$vehiculo->marca}}</p>
                             </div>
 
                             <div class="col s12 m5">
@@ -44,10 +44,22 @@
                             <div class="col s8 offset-s2 m7">
                                 <p class="secondary-text-color">{{$vehiculo->placa}}</p>
                             </div>
+                            <div class="col s12 m5">
+                                <p class="primary-text-color secondary-text-style">Linea:</p>
+                            </div>
+                            <div class="col s8 offset-s2 m7">
+                                <p class="secondary-text-color">{{$vehiculo->linea}}</p>
+                            </div>
+                            <div class="col s12 m5">
+                                <p class="primary-text-color secondary-text-style">Sindicato:</p>
+                            </div>
+                            <div class="col s8 offset-s2 m7">
+                                <p class="secondary-text-color">{{$vehiculo->sindicato->nombre}}</p>
+                            </div>
 
                     </div>
                     <div class="card-action right-align">
-                        <a href="{{ route('conductor.index') }}" class="waves-effect waves-brown btn-flat red-text bold">Atras</a>
+                        <a href="{{ route('vehiculo.index') }}" class="waves-effect waves-brown btn-flat red-text bold">Atras</a>
                     </div>
                 </div>
             </div>
