@@ -19,6 +19,19 @@
                             </div>
                         </div>
 
+                    {{-- Mostrar mensaje de error de cuenta bloqueada --}}
+                    @if ($errors->has('bloqueado'))
+                        <div class="row">
+                            <div class="col s12">
+                                <div class="card red lighten-4">
+                                    <div class="card-content">
+                                        {{ $errors->first('bloqueado') }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endif
+
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -57,13 +70,7 @@
                                         <p>Usuario:cliente@cliente.com<br>Contraseña:cliente</p>
                                     </div>
                                 </div>
-                                {{-- @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif --}}
                             </div>
-
                         </div>
                     </form>
                 </div>

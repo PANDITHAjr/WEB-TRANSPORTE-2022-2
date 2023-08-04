@@ -2,58 +2,37 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use Illuminate\Validation\ValidationException;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Controller; // Asegúrate de que esta línea de importación esté presente
 
 class LoginController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Login Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles authenticating users for the application and
-    | redirecting them to your home screen. The controller uses a trait
-    | to conveniently provide its functionality to your applications.
-    |
-    */
-
     use AuthenticatesUsers;
 
-    /**
-     * Where to redirect users after login.
-     *
-     * @var string
-     */
+    // ... otros métodos ...
 
-    ////protected $redirectTo = RouteServiceProvider::HOME;
-       /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    // public function __construct()
-    // {
-    //     $this->middleware('guest')->except('logout');
-    // }
+    protected function redirectTo()
+    {
+        if (auth()->check()) {
+            $user = auth()->user();
 
-
-     protected function redirectTo()
-     {
-         if (auth()->check()) {
-             $user = auth()->user();
-
-            if ($user->personal && $user->personal->tipo_personal->descripcion == 'Cliente') {
-                return RouteServiceProvider::HOME2;
+            if ($user->state == 'bloqueado') {
+                return route('user_locked');
+            } elseif ($user->personal && $user->personal->tipo_personal->descripcion == 'Cliente') {
+                return route('home2');
             }
         }
 
-        return RouteServiceProvider::HOME;
+        return route('home');
     }
 
-    public function __construct()
+
+    public function showLockedMessage()
     {
-        $this->middleware('guest')->except('logout');
+        return view('auth.user_locked');
     }
 }
+

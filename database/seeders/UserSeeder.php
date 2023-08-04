@@ -74,6 +74,7 @@ class UserSeeder extends Seeder
         $user->name = 'weimar';
         $user->email = 'weimar.ustarezrivera@gmail.com';
         $user->password = bcrypt('weimar');
+        $user->state = 'desbloqueado';
         $user->id_personal = '1';
         $user->save();
 
@@ -94,6 +95,7 @@ class UserSeeder extends Seeder
         $user->name = 'ayelen';
         $user->email = 'ayelen@gmail.com';
         $user->password = bcrypt('ayelen');
+        $user->state = 'desbloqueado';
         $user->id_personal = '2';
         $user->save();
 
@@ -116,6 +118,7 @@ class UserSeeder extends Seeder
         $user->name = 'Carlos';
         $user->email = 'rcarballo.carlos@gmail.com';
         $user->password = bcrypt('2000');
+        $user->state = 'desbloqueado';
         $user->id_personal = '3';
         $user->save();
 
@@ -137,6 +140,7 @@ class UserSeeder extends Seeder
         $user->name = 'Evans';
         $user->email = 'evans@gmail.com';
         $user->password = bcrypt('2000');
+        $user->state = 'desbloqueado';
         $user->id_personal = '4';
         $user->save();
 
@@ -169,6 +173,7 @@ class UserSeeder extends Seeder
         $user->name = 'Rodrigo';
         $user->email = 'rodrigo@gmail.com';
         $user->password = bcrypt('1000');
+        $user->state = 'desbloqueado';
         $user->id_personal = '6';
         $user->save();
 

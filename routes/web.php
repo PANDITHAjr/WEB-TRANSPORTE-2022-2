@@ -1,5 +1,8 @@
 <?php
 use App\Http\Controllers\VehiculoController;
+use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\MantenimientoController;
 use App\Http\Controllers\ConductorController;
 use App\Http\Controllers\PersonalController;
@@ -39,6 +42,9 @@ Route::get('/home2', [App\Http\Controllers\Home2Controller::class, 'index'])->na
 
 Route::middleware(['auth'])->group(function(){
 
+    Route::get('/user_locked', 'App\Http\Controllers\Auth\LoginController@showLockedMessage')->name('user_locked');
+
+
     Route::group(['prefix'=>'personal'], function(){
 
         Route::get('/', [PersonalController::class, 'index'])->name('personal.index');
@@ -75,6 +81,7 @@ Route::middleware(['auth'])->group(function(){
         Route::get('/{id}/edit', [UserController::class, 'edit'])->name('usuario.edit');
         Route::put('/{id}', [UserController::class, 'update'])->name('usuario.update');
         Route::get('/{id}/destroy', [UserController::class, 'destroy'])->name('usuario.destroy');
+
 
     });
 

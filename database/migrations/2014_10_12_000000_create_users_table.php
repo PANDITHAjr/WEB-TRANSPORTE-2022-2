@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateUsersTable extends Migration
 {
-    
+
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
@@ -15,8 +15,8 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('state')->nullable();
             $table->rememberToken();
-
             $table->unsignedBigInteger('id_personal');
             $table->foreign('id_personal')->references('id')->on ('personal')->cascadeOnDelete()->cascadeOnUpdate();
 
@@ -28,4 +28,6 @@ class CreateUsersTable extends Migration
     {
         Schema::dropIfExists('users');
     }
+
+
 }

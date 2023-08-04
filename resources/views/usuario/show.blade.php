@@ -59,6 +59,18 @@
                         </div>
                     </div>
 
+                    <div class="row">
+                        <div class="col s12 m5">
+                            <p class="primary-text-color secondary-text-style">Estado:</p>
+                        </div>
+                        <form action="{{ route('usuario.bloquearDesbloquear', $usuario->id) }}" method="POST">
+                            @csrf
+                            @method('PATCH')
+                            <button type="submit" class="waves-effect {{ $usuario->state === 'bloqueado' ? 'green' : 'red' }} accent-4 btn">
+                                {{ $usuario->state === 'bloqueado' ? 'Desbloquear' : 'Bloquear' }}
+                            </button>
+                        </form>
+                    </div>
                     <div class="card-action right-align">
                         <a href="{{ route('usuario.index') }}" class="waves-effect waves-brown btn-flat red-text bold">Atras</a>
                     </div>
