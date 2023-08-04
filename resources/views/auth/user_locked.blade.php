@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header" style="background-color: #ff9999; color: white; font-weight: bold;">Cuenta Bloqueada</div>
+                <div class="card-header" style="background-color: black; color: white; font-weight: bold; text-align: center;">Cuenta Bloqueada</div>
 
                 <div class="card-body">
                     <div style="text-align: center;">
@@ -18,10 +18,10 @@
                         <div style="font-size: 48px; margin-bottom: 20px;">
                             <i class="fas fa-lock" style="color: #d9534f;"></i>
                         </div>
-                        <h2 style="font-size: 24px; margin-bottom: 10px; color: #333;">Cuenta Bloqueada</h2>
+                        <h2 style="font-size: 24px; margin-bottom: 10px; color: red;">Cuenta Bloqueada</h2>
                         <p style="font-size: 16px; color: #777;">Tu cuenta ha sido bloqueada.</p>
                         <p style="font-size: 16px; color: #777;">Por favor, contacta al administrador para obtener ayuda.</p>
-                        <button style="background-color: #d9534f; color: #fff; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer;">
+                        <button style="background-color: red; color: #fff; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer;">
                             <a href="https://api.whatsapp.com/send/?phone=59167671718&text=Hola+PANDITHAjr+mi+cuenta+se+encuentra+BLOQUEADA%21&type=phone_number&app_absent=0" style="color: #fff;"> Contactar al Administrado
                         </button>
                     </div>
