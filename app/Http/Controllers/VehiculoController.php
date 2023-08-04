@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Commands\UpdateVehiculoCommand;
 use App\Models\Vehiculo;
 use App\Models\Personal;
 use App\Models\Sindicato;
@@ -11,27 +12,27 @@ class VehiculoController extends Controller
 {
 
     public function index(Request $request)
-{
-    $buscar = $request->input('buscar');
-    $refrescar = $request->input('refrescar');
+    {
+        $buscar = $request->input('buscar');
+        $refrescar = $request->input('refrescar');
 
-    $vehiculos = Vehiculo::query();
+        $vehiculos = Vehiculo::query();
 
-    if ($buscar) {
-        $vehiculos->where('placa', 'like', "%$buscar%")
-                  ->orWhere('modelo', 'like', "%$buscar%");
+        if ($buscar) {
+            $vehiculos->where('placa', 'like', "%$buscar%")
+                        ->orWhere('modelo', 'like', "%$buscar%");
+        }
+
+        if ($refrescar) {
+            // Si se solicita refrescar, obtenemos todos los registros sin paginación.
+            $vehiculos = $vehiculos->get();
+        } else {
+            // Aplicamos la paginación con un límite de 10 registros por página.
+            $vehiculos = $vehiculos->paginate(10);
+        }
+
+        return view('vehiculo.index', compact('vehiculos'));
     }
-
-    if ($refrescar) {
-        // Si se solicita refrescar, obtenemos todos los registros sin paginación.
-        $vehiculos = $vehiculos->get();
-    } else {
-        // Aplicamos la paginación con un límite de 10 registros por página.
-        $vehiculos = $vehiculos->paginate(10);
-    }
-
-    return view('vehiculo.index', compact('vehiculos'));
-}
 
 
 
@@ -67,14 +68,9 @@ class VehiculoController extends Controller
 
     public function update(Request $request, $id)
     {
-        $vehiculo = vehiculo::findOrFail($id);
-        $vehiculo->linea = $request->input('linea');
-        $vehiculo->placa = $request->input('placa');
-        $vehiculo->marca = $request->input('marca');
-        $vehiculo->modelo = $request->input('modelo');
-        $vehiculo->id_personal = $request->input('id_personal');
-        $vehiculo->id_sindicato = $request->input('id_sindicato');
-        $vehiculo->save();
+        $command = new UpdateVehiculoCommand($id, $request->all());
+
+        $command->handle();
 
         return redirect()->route('vehiculo.index');
     }
