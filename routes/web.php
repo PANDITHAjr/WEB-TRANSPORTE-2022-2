@@ -72,18 +72,19 @@ Route::middleware(['auth'])->group(function(){
 
     });
 
-    Route::group(['prefix'=>'usuario'], function(){
-
+    Route::group(['prefix' => 'usuario'], function () {
         Route::get('/', [UserController::class, 'index'])->name('usuario.index');
-        Route::get('/create', [UserController::class, 'create']) -> name('usuario.create');
+        Route::get('/create', [UserController::class, 'create'])->name('usuario.create');
         Route::post('/', [UserController::class, 'store'])->name('usuario.store');
         Route::get('/{id}', [UserController::class, 'show'])->name('usuario.show');
         Route::get('/{id}/edit', [UserController::class, 'edit'])->name('usuario.edit');
         Route::put('/{id}', [UserController::class, 'update'])->name('usuario.update');
         Route::get('/{id}/destroy', [UserController::class, 'destroy'])->name('usuario.destroy');
 
-
+        // Agrega la definición de la ruta aquí, dentro del grupo
+        Route::patch('/{usuario}/bloquear-desbloquear', [UserController::class, 'bloquearDesbloquear'])->name('usuario.bloquearDesbloquear');
     });
+
 
 
     Route::group(['prefix'=>'conductor'], function(){
