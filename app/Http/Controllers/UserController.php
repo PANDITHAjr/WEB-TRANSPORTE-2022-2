@@ -85,4 +85,27 @@ class UserController extends Controller
 
         return redirect()->route('usuario.index');
     }
+
+    public function bloquearDesbloquear($usuario)
+    {
+        $user = User::find($usuario);
+
+        if (!$user) {
+            // Si el usuario no se encuentra, redirige o muestra un mensaje de error
+            return redirect()->back()->with('error', 'Usuario no encontrado');
+        }
+
+        // Cambiar el estado de bloqueo del usuario
+        if ($user->state === 'bloqueado') {
+            $user->state = 'desbloqueado'; // Desbloquear usuario
+        } else {
+            $user->state = 'bloqueado';  // Bloquear usuario
+        }
+
+        $user->save();
+
+        // Redirige de regreso a la página del usuario con un mensaje de éxito
+        return redirect()->route('usuario.show', ['id' => $usuario])->with('success', 'Usuario bloqueado/desbloqueado exitosamente');
+    }
+
 }

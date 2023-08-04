@@ -1,8 +1,6 @@
 @auth
     <header>
-        @if (auth()->user()->status == 'desbloqueado')
             @include('layouts.menu-sidenav')
-        @endif
 
     </header>
 @endauth
@@ -11,7 +9,7 @@
     <div class="nav-wrapper">
 
         @auth
-            @if (auth()->user()->status == 'desbloqueado')
+
                 @if (auth()->user()->personal->tipo_personal->descripcion == 'Cliente')
                     <a style="color: white; font-weight: bold;" href="{{ route('home2') }}"
                         class="brand-logo center hide-on-small-only">SINDICATO 27 DE DICIEMBRE</a>
@@ -19,11 +17,11 @@
                     <a style="color: white; font-weight: bold;" href="{{ route('home') }}"
                         class="brand-logo center hide-on-small-only">SINDICATO 27 DE DICIEMBRE</a>
                 @endif
-            @endif
+
 
             {{-- <a href="{{ route('home') }}" class="brand-logo center hide-on-small-only">SINDICATO DE TRANSPORTE 27 DE DICIEMBRE</a> --}}
             <ul id="nav-mobile" class="right">
-                @if (auth()->user()->status == 'desbloqueado')
+
                     @if (auth()->user()->personal->tipo_personal->descripcion == 'Cliente')
                         <li><a href="{{ route('home2') }}" class="waves-effect dark-primary-color-text" type="submit"><i
                                     class="material-icons">home</i></a></li>
@@ -31,7 +29,7 @@
                         <li><a href="{{ route('home') }}" class="waves-effect dark-primary-color-text" type="submit"><i
                                     class="material-icons">home</i></a></li>
                     @endif
-                @endif
+
 
                 {{-- <li><a href="{{ route('home') }}" class="waves-effect dark-primary-color-text" type="submit"><i class="material-icons">home</i></a></li> --}}
                 <li>
@@ -44,11 +42,11 @@
                 </li>
 
                 <li>
-                    @if (auth()->user()->status == 'desbloqueado')
+
                     <a href="{{ route('personal.show', [auth()->user()->id]) }}" role="button">
                         {{ Auth::user()->name }}
                     </a>
-                    @endif
+
                 </li>
             </ul>
 
